@@ -1,5 +1,5 @@
 package utils;
-
+ 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -7,18 +7,18 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Properties;
-
+ 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
-
+ 
 public class Base {
     public static WebDriver driver;
     public static FileInputStream file;
     public static Properties prop;
-
+ 
     public void loadProperties() {
         String filePath = System.getProperty("user.dir") + "/config/browser.properties";
         try {
@@ -31,7 +31,7 @@ public class Base {
             e.printStackTrace();
         }
     }
-
+ 
     public void openBrowser() {
         loadProperties();
         try {
@@ -47,3 +47,4 @@ public class Base {
         driver = new EventFiringDecorator<>(listener).decorate(driver);
     }
 }
+ 
