@@ -1,5 +1,7 @@
 package runner;
 
-public class TestRunner {
+import utils.Base;
+
+public class TestRunner extends Base {
     
 }
