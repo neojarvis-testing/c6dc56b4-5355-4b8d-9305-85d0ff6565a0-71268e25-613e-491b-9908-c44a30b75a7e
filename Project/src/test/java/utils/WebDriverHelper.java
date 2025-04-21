@@ -1,10 +1,10 @@
 package utils;
-
+ 
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-
+ 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -14,16 +14,16 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+ 
 public class WebDriverHelper {
     WebDriver driver = Base.driver;
     List<String> handles = new ArrayList<>();
-
+ 
     public WebDriverHelper(WebDriver driver) {
         this.driver = driver;
         handles.add(driver.getWindowHandle());
     }
-
+ 
     public void clickByLocater(By locator) {
         try {
             driver.findElement(locator).click();
@@ -31,7 +31,7 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-
+ 
     public void sendData(By locators, String data) {
         try {
             driver.findElement(locators).sendKeys(data);
@@ -39,7 +39,7 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-
+ 
     public void scrollToAnElement(By locator) {
         try {
             JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -49,7 +49,7 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-
+ 
     public void jsClick(By locator) {
         try {
             JavascriptExecutor obj = (JavascriptExecutor) driver;
@@ -59,7 +59,7 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-
+ 
     public void scrollByPixel(int x, int y) {
         try {
             JavascriptExecutor obj = (JavascriptExecutor) driver;
@@ -68,7 +68,7 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-
+ 
     public void waitForElementToBeVisible(By locator, int sec) {
         try {
             new WebDriverWait(driver, Duration.ofSeconds(sec))
@@ -77,7 +77,7 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-
+ 
     public void waitForElementToBeClickable(By locator, int sec) {
         try {
             new WebDriverWait(driver, Duration.ofSeconds(sec))
@@ -86,7 +86,7 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-
+ 
     public void hoverByLocater(By locator) {
         try {
             WebElement webElement = driver.findElement(locator);
@@ -96,7 +96,7 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-
+ 
     public void enterAction(By locator) {
         try {
             WebElement webElement = driver.findElement(locator);
@@ -105,7 +105,7 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-
+ 
     public void dropDown(By locater, String value) {
         try {
             WebElement webElement = driver.findElement(locater);
@@ -115,7 +115,7 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-
+ 
     public void switchToNewTab() {
         try {
             String currentWindow = driver.getWindowHandle();
@@ -130,7 +130,7 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-
+ 
     public void goBackToWindow(int i) {
         try {
             driver.switchTo().window(handles.get(i));
@@ -138,11 +138,11 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-
+ 
     public List<WebElement> getElementsByXPath(String path) {
         return driver.findElements(By.xpath(path));
     }
-
+ 
     public void iterateResults(String path, String value) {
         try {
             List<WebElement> resultList = getElementsByXPath(path);
