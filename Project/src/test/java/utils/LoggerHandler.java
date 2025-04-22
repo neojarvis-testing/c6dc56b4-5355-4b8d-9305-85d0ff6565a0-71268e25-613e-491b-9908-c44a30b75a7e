@@ -14,6 +14,7 @@ public class LoggerHandler {
         if (!logsDir.exists()) {
             logsDir.mkdirs();
         }
+        
     }
    
     public static void trace(String message) {
