@@ -1,5 +1,5 @@
 package pages;
-
+ 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -16,7 +16,7 @@ public class FooterIconPageActions {
     WebDriverHelper helper;
 
     ExtentTest test;
-
+ 
     /*
      * Method Name: FooterIconPageActions
      * Author Name: T Gnana Asritha
@@ -29,10 +29,10 @@ public class FooterIconPageActions {
     public FooterIconPageActions(ExtentTest test) {
         helper = new WebDriverHelper(Base.driver);
         this.test = test;
-
-
+ 
+ 
     }
-
+ 
     /*
      * Method Name: clickFacebook
      * Author Name: T Gnana Asritha
@@ -41,7 +41,7 @@ public class FooterIconPageActions {
      * Return Type: void
      * Parameter List: None
      */
-
+ 
     public void clickFacebook() {
         try {
             helper.scrollToAnElement(FooterIconPageLocators.facebook);
@@ -57,7 +57,7 @@ public class FooterIconPageActions {
             LoggerHandler.error("Clicked on Facebook Icon Failed");
             test.log(Status.FAIL, "Clicked on Facebook Icon Failed");
             Reporter.addScreenshotToReport("Facebook", test,"Facebook Screenshot",Base.driver);
-
+ 
         }
     }
     /*
@@ -68,10 +68,10 @@ public class FooterIconPageActions {
      * Return Type: void
      * Parameter List: None
      */
-
+ 
     public void clickTwitter() {
         try {
-
+ 
             helper.clickByLocater(FooterIconPageLocators.twitter);
             helper.switchToNewTab();
             Base.driver.close();
@@ -85,7 +85,7 @@ public class FooterIconPageActions {
             Reporter.addScreenshotToReport("Twitter", test,"Twitter Screenshot",Base.driver);
         }
     }
-
+ 
     /*
      * Method Name: clickYoutube
      * Author Name: T Gnana Asritha
@@ -110,7 +110,7 @@ public class FooterIconPageActions {
             Reporter.addScreenshotToReport("Youtube", test,"Youtube Screenshot",Base.driver);
         }
     }
-
+ 
     /*
      * Method Name: clickInstagram
      * Author Name: T Gnana Asritha
@@ -134,7 +134,7 @@ public class FooterIconPageActions {
             Reporter.addScreenshotToReport("Instagram", test,"Instagram Screenshot",Base.driver);
         }
     }
-
+ 
     /*
      * Method Name: clickLinkdin
      * Author Name: T Gnana Asritha
@@ -159,7 +159,7 @@ public class FooterIconPageActions {
             Reporter.addScreenshotToReport("Linkedin", test,"Linkedin Screenshot",Base.driver);
         }
     }
-
+ 
     /*
      * Method Name: clickpintrest
      * Author Name: T Gnana Asritha
@@ -181,10 +181,10 @@ public class FooterIconPageActions {
             LoggerHandler.error("Clicked on Pinterest Icon Failed");
             test.log(Status.FAIL, "Clicked on Pinterest Icon Failed");
             Reporter.addScreenshotToReport("Pinterest", test,"Pinterest Screenshot",Base.driver);
-
+ 
         }
     }
-
+ 
     /*
      * Method Name: clicksnapchat
      * Author Name: T Gnana Asritha
@@ -217,7 +217,7 @@ public class FooterIconPageActions {
      * Return Type: void
      * Parameter List: None
      */
-
+ 
     public void footerTestCase() {
         clickFacebook();
         clickTwitter();
@@ -226,7 +226,5 @@ public class FooterIconPageActions {
         clickLinkdin();
         clickpintrest();
         clicksnapchat();
-
     }
-
 }

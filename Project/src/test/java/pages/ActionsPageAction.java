@@ -1,5 +1,5 @@
 package pages;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
@@ -14,20 +14,20 @@ public class ActionsPageAction {
     public WebDriverHelper helper;
     ExtentTest test;
     Assertion assertion = new Assertion(Base.driver);
-
+ 
     /*
      * Method Name: ActionsPageAction
      * Author Name: Hrushikesh
      * Description: Constructor that initializes the WebDriverHelper and assigns the provided ExtentTest and LoggerHandler instances.
      * Return Type: N/A (Constructor)
-     * Parameter List: 
+     * Parameter List:
      *     - ExtentTest test: The ExtentTest instance for logging test results.
     */
     public ActionsPageAction(ExtentTest test) {
         helper = new WebDriverHelper(Base.driver);
         this.test = test;
     }
-
+ 
     /*
      * Method Name: verifyActionsSec
      * Author Name: Hrushikesh
@@ -50,7 +50,7 @@ public class ActionsPageAction {
             Reporter.addScreenshotToReport("ActionsSection", test,"Finance Screenshot",Base.driver);
         }
     }
-
+ 
     /*
      * Method Name: clickOnAppointments
      * Author Name: Hrushikesh
@@ -71,7 +71,7 @@ public class ActionsPageAction {
             Reporter.addScreenshotToReport("Appointments", test,"Finance Screenshot",Base.driver);
         }
     }
-
+ 
     /*
      * Method Name: clickOnInsurance
      * Author Name: Hrushikesh
@@ -91,7 +91,7 @@ public class ActionsPageAction {
         } catch (Exception e) {
             LoggerHandler.error("Insurance not clicked");
             test.log(Status.FAIL, "Insurance not clicked");
-        } 
+        }
         /*
          * Method Name: clickOnEvent
          * Author Name: Hrushikesh
@@ -100,9 +100,9 @@ public class ActionsPageAction {
          * Return Type: void
          * Parameter List: None
          */
-
+ 
     }
-
+ 
     public void clickOnEvent() {
         try {
             Base.driver.navigate().back();
@@ -121,7 +121,7 @@ public class ActionsPageAction {
             test.log(Status.FAIL, "Event Url is not verified");
         }
     }
-
+ 
     /*
      * Method Name: clickOnFinance
      * Author Name: Hrushikesh
@@ -148,7 +148,7 @@ public class ActionsPageAction {
             test.log(Status.FAIL, "Finance Url is not verified");
         }
     }
-
+ 
     /*
      * Method Name: clickOnCleveLand
      * Author Name: Hrushikesh
@@ -170,7 +170,7 @@ public class ActionsPageAction {
             Reporter.addScreenshotToReport("CleveLand", test,"CleveLand Screenshot",Base.driver);
         }
     }
-
+ 
     /*
      * Method Name: clickOnPayBill
      * Author Name: Hrushikesh
@@ -192,7 +192,7 @@ public class ActionsPageAction {
             Reporter.addScreenshotToReport("PayBill", test,"PayBill Screenshot",Base.driver);
         }
     }
-
+ 
     /*
      * Method Name: clickOnPrice
      * Author Name: Hrushikesh
@@ -214,7 +214,7 @@ public class ActionsPageAction {
             Reporter.addScreenshotToReport("Price", test,"Price Screenshot",Base.driver);
         }
     }
-
+ 
     /*
      * Method Name: clickOnRefer
      * Author Name: Hrushikesh
@@ -240,7 +240,7 @@ public class ActionsPageAction {
             test.log(Status.FAIL, "Refer a Patient Url is not verified");
         }
     }
-
+ 
     /*
      * Method Name: clickOnPhone
      * Author Name: Hrushikesh
@@ -266,7 +266,7 @@ public class ActionsPageAction {
             test.log(Status.FAIL, "Phone Directory Url is not verified");
         }
     }
-
+ 
     /*
      * Method Name: clickOnSecondOpi
      * Author Name: Hrushikesh
@@ -292,7 +292,7 @@ public class ActionsPageAction {
             test.log(Status.FAIL, "Virtual Second Opinions Url is not verified");
         }
     }
-
+ 
     /*
      * Method Name: clickOnVirtual
      * Author Name: Hrushikesh
@@ -314,7 +314,7 @@ public class ActionsPageAction {
             Reporter.addScreenshotToReport("Virtual", test,"Virtual Screenshot",Base.driver);
         }
     }
-
+ 
     /*
      * Method Name: clickonCleveImg
      * Author Name: Hrushikesh
@@ -348,7 +348,7 @@ public class ActionsPageAction {
      * Return Type: void
      * Parameter List: None
      */
-
+ 
     public void allActions() {
         verifyActionsSec();
         clickOnAppointments();

@@ -14,7 +14,7 @@ public class Base {
     LoggerHandler loggerHandler = new LoggerHandler();
      /*
      * Method Name: openBrowser
-     * Author Name: 
+     * Author Name: Nikhith
      * Description: This method initializes the WebDriver, sets browser options, and opens the specified URL.
      * Return Type: void
      * Parameter List: NA
