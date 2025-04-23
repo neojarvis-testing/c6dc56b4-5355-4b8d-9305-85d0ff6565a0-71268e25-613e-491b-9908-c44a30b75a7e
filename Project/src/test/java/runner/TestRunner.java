@@ -114,7 +114,7 @@ public class TestRunner extends Base {
         driver.quit();
     }
     @AfterClass
-    public void flush() {
-        reports.flush();
-    }
+	   public void wrapUp() {
+	       reports.flush();
+	   }
 }

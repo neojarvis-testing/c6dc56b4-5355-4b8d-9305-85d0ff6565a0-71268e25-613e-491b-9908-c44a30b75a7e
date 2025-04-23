@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
  
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.ScheduleNowPageLocators;
 import utils.Assertion;
 import utils.ExcelReader;
@@ -19,7 +19,7 @@ import utils.WebDriverHelper;
 * Description : The Class contains the action methods for ScheduleNowPage
 * Return Type : NA
 * Params List : NA
-*/ 
+*/
 public class ScheduleNowPageActions {
     WebDriver driver;
     WebDriverHelper helper;
@@ -32,7 +32,7 @@ public class ScheduleNowPageActions {
     * Description : The constructor contains the initialization
     * Return Type : NA
     * Params List : WebDriver driver, ExtentTest test
-    */ 
+    */
     public ScheduleNowPageActions(WebDriver driver, ExtentTest test){
         this.driver = driver;
         this.test = test;
@@ -46,7 +46,7 @@ public class ScheduleNowPageActions {
     * Description : It performs click operation on Schedule Now and verifies title
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void clickScheduleNow(){
         try{
             helper.waitForElementToBeVisible(ScheduleNowPageLocators.scheduleNow, 6);
@@ -56,7 +56,6 @@ public class ScheduleNowPageActions {
             test.log(Status.PASS, "Clicked Schedule Now");
  
             asserr.verifyFullPageTitle(retriveData(0, 0));
-           // asserr.verifyFullTitle(retriveData(0, 0));
             LoggerHandler.info("Verified Title");
             test.log(Status.INFO,"Verified Title");
             test.log(Status.PASS, "Verified Title");
@@ -74,7 +73,7 @@ public class ScheduleNowPageActions {
     * Description : It performs click operation on requestAppointment and verifies title
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void clickRequestAnAppointment(){
         try{
             helper.waitForElementToBeVisible(ScheduleNowPageLocators.requestAppointment,6);
@@ -82,20 +81,17 @@ public class ScheduleNowPageActions {
             LoggerHandler.info("Clicked on Request an Appointment");
             test.log(Status.INFO,"Clicked on Request an Appointment");
             test.log(Status.PASS, "Clicked on Request an Appointment");
-
+ 
             asserr.verifyFullPageTitle(retriveData(1, 0));
             LoggerHandler.info("Verified Title");
             test.log(Status.INFO,"Verified Title");
             test.log(Status.PASS, "Verified Title");
-            //asserr.verifyFullTitle(retriveData(1, 0));
-            LoggerHandler.info("Clicked on Request an Appointment");
-            test.log(Status.PASS, "Clicked on Request an Appointment");
         }
         catch(Exception e){
             LoggerHandler.error("Clicked on Request an Appointment failed");
             test.log(Status.FAIL, "Clicked on Request an Appointment failed");
             Reporter.addScreenshotToReport("Clicked on Request Appointment failed", test, null, driver);
-
+ 
             LoggerHandler.error("Verified Title");
             test.log(Status.FAIL, "Verified Title");
             Reporter.addScreenshotToReport("Verified Title", test, null, driver);
@@ -108,7 +104,7 @@ public class ScheduleNowPageActions {
     * Description : It performs click operation on getStarted and verifies text
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void clickGetStarted(){
         try{
             helper.waitForElementToBeVisible(ScheduleNowPageLocators.heading1, 6);
@@ -117,20 +113,17 @@ public class ScheduleNowPageActions {
             test.log(Status.INFO,"Clicked on Get Started");
             test.log(Status.PASS, "Clicked on Get Started");
             Reporter.addScreenshotToReport("Clicked on Get Started", test, null, driver);
-
+ 
             asserr.verifyFullText(retriveData(2, 0),ScheduleNowPageLocators.heading1);
             LoggerHandler.info("Verified Text");
             test.log(Status.INFO,"Verified Text");
             test.log(Status.PASS, "Verified Text");
-            //asserr.verifyFullText(retriveData(2, 0),ScheduleNowPageLocators.heading1);
-            LoggerHandler.info("Clicked on Get Started");
-            test.log(Status.PASS, "Clicked on Get Started");
         }
         catch(Exception e){
             LoggerHandler.error("Clicked on Get Started failed");
             test.log(Status.FAIL, "Clicked on Get Started failed");
             Reporter.addScreenshotToReport("Clicked on Get Started failed", test, null, driver);
-
+ 
             LoggerHandler.error("Verified Text");
             test.log(Status.FAIL, "Verified Text");
             Reporter.addScreenshotToReport("Verified Text", test, null, driver);
@@ -143,7 +136,7 @@ public class ScheduleNowPageActions {
     * Description : It performs click operation on me button and verifies text
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void clickMe(){
         try{
             helper.waitForElementToBeVisible(ScheduleNowPageLocators.meButton, 4);
@@ -151,20 +144,17 @@ public class ScheduleNowPageActions {
             LoggerHandler.info("Clicked on Me");
             test.log(Status.INFO,"Clicked on Me");
             test.log(Status.PASS, "Clicked on Me");
-
+ 
             asserr.verifyFullText(retriveData(3, 0), ScheduleNowPageLocators.heading2);
             LoggerHandler.info("Verified Text");
             test.log(Status.INFO,"Verified Text");
             test.log(Status.PASS, "Verified Text");
-            //asserr.verifyFullText(retriveData(3, 0), ScheduleNowPageLocators.heading2);
-            LoggerHandler.info("Clicked on Me");
-            test.log(Status.PASS, "Clicked on Me");
         }
         catch(Exception e){
             LoggerHandler.error("Clicked on Me failed");
             test.log(Status.FAIL, "Clicked on Me failed");
             Reporter.addScreenshotToReport("Clicked on Me failed", test, null, driver);
-
+ 
             LoggerHandler.error("Verified Text");
             test.log(Status.FAIL, "Verified Text");
             Reporter.addScreenshotToReport("Verified Text", test, null, driver);
@@ -177,7 +167,7 @@ public class ScheduleNowPageActions {
     * Description : It performs click operation on notSure Button and verifies text
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void clickNotSure(){
         try{
             helper.waitForElementToBeVisible(ScheduleNowPageLocators.notSureButton,6);
@@ -186,20 +176,17 @@ public class ScheduleNowPageActions {
             test.log(Status.INFO,"Clicked on Not Sure");
             test.log(Status.PASS, "Clicked on NotSure");
             Reporter.addScreenshotToReport("Clicked on NotSure", test, null, driver);
-            
+           
             asserr.verifyFullText(retriveData(4, 0), ScheduleNowPageLocators.heading3);
             LoggerHandler.info("Verified Text");
             test.log(Status.INFO,"Verified Text");
             test.log(Status.PASS, "Verified Text");
-            //asserr.verifyFullText(retriveData(4, 0), ScheduleNowPageLocators.heading3);
-            LoggerHandler.info("Clicked on NotSure");
-            test.log(Status.PASS, "Clicked on NotSure");
         }
         catch(Exception e){
             LoggerHandler.error("Clicked on NotSure failed");
             test.log(Status.FAIL, "Clicked on NotSure failed");
             Reporter.addScreenshotToReport("Clicked on NotSure failed", test, null, driver);
-
+ 
             LoggerHandler.error("Verified Text");
             test.log(Status.FAIL, "Verified Text");
             Reporter.addScreenshotToReport("Verified Text", test, null, driver);
@@ -209,10 +196,10 @@ public class ScheduleNowPageActions {
     /*
     * Method Name : enterFirstName
     * Author Name : Nikhith Sree Sai
-    * Description : It passes first name in the field 
+    * Description : It passes first name in the field
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void enterFirstName(){
         try{
             helper.clickByLocater(ScheduleNowPageLocators.firstName);
@@ -234,7 +221,7 @@ public class ScheduleNowPageActions {
     * Description : It passes last name in the field
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void enterLastName(){
         try{
             helper.clickByLocater(ScheduleNowPageLocators.lastName);
@@ -253,10 +240,10 @@ public class ScheduleNowPageActions {
     /*
     * Method Name : selectGender
     * Author Name : Nikhith Sree Sai
-    * Description : It selects gender in dropdown 
+    * Description : It selects gender in dropdown
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void selectGender(){
         try{
             helper.dropDown(ScheduleNowPageLocators.gender, retriveData(5, 2));
@@ -277,7 +264,7 @@ public class ScheduleNowPageActions {
     * Description : It selects Marital Status In the dropdown
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void selectMaritalStatus(){
         try{
             helper.dropDown(ScheduleNowPageLocators.maritalStatus, retriveData(5, 3));
@@ -298,7 +285,7 @@ public class ScheduleNowPageActions {
     * Description : It passes date to the field
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void enterDateOfBirth(){
         try{
             helper.clickByLocater(ScheduleNowPageLocators.dateOfBirth);
@@ -320,7 +307,7 @@ public class ScheduleNowPageActions {
     * Description : It verifies text and passes address in the field
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void enterAddress(){
         try{
             asserr.verifyFullText(retriveData(6,0),ScheduleNowPageLocators.heading4);
@@ -329,7 +316,7 @@ public class ScheduleNowPageActions {
             LoggerHandler.info("Verified Text");
             test.log(Status.INFO,"Verified Text");
             test.log(Status.PASS, "Verified Text");
-
+ 
             LoggerHandler.info("Entered Address");
             test.log(Status.INFO,"Entered Address");
             test.log(Status.PASS, "Entered Address");
@@ -338,7 +325,7 @@ public class ScheduleNowPageActions {
             LoggerHandler.error("Verified Text");
             test.log(Status.FAIL, "Verified Text");
             Reporter.addScreenshotToReport("Verified Text", test, null, driver);
-
+ 
             LoggerHandler.error("Entered Address failed");
             test.log(Status.FAIL, "Entered Address failed");
             Reporter.addScreenshotToReport("Entered Address failed", test, null, driver);
@@ -353,7 +340,7 @@ public class ScheduleNowPageActions {
     * Description : It passes city in the field
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void enterCity(){
         try{
             helper.clickByLocater(ScheduleNowPageLocators.city);
@@ -375,7 +362,7 @@ public class ScheduleNowPageActions {
     * Description : It selects the state in dropdown
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void selectState(){
         try{
             helper.clickByLocater(ScheduleNowPageLocators.state);
@@ -397,7 +384,7 @@ public class ScheduleNowPageActions {
     * Description : It passes ZipCode in the field
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void enterZipCode(){
         try{
             helper.clickByLocater(ScheduleNowPageLocators.zipCode);
@@ -419,7 +406,7 @@ public class ScheduleNowPageActions {
     * Description : It passes email in the field
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void enterEmail(){
         try{
             helper.clickByLocater(ScheduleNowPageLocators.email);
@@ -441,7 +428,7 @@ public class ScheduleNowPageActions {
     * Description : It passes phone number in the field
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void enterPhoneNumber(){
         try{
             helper.clickByLocater(ScheduleNowPageLocators.phoneNumber);
@@ -460,17 +447,17 @@ public class ScheduleNowPageActions {
     /*
     * Method Name : enterReason
     * Author Name : Nikhith Sree Sai
-    * Description : It verifies text and passes reason in the field 
+    * Description : It verifies text and passes reason in the field
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void enterReason(){
         try{
             asserr.verifyFullText(retriveData(8, 0), ScheduleNowPageLocators.heading5);
             LoggerHandler.info("Verified Text");
             test.log(Status.INFO,"Verified Text");
             test.log(Status.PASS, "Verified Text");
-            
+           
             helper.clickByLocater(ScheduleNowPageLocators.reason);
             helper.sendData(ScheduleNowPageLocators.reason, retriveData(9, 0));
             LoggerHandler.info("Entered Reason");
@@ -482,7 +469,7 @@ public class ScheduleNowPageActions {
             LoggerHandler.error("Verified Text");
             test.log(Status.FAIL, "Verified Text");
             Reporter.addScreenshotToReport("Verified Text", test, null, driver);
-
+ 
             LoggerHandler.error("Entered Reason failed");
             test.log(Status.FAIL, "Entered Reason failed");
             Reporter.addScreenshotToReport("Entered Reason failed", test, null, driver);
@@ -496,26 +483,24 @@ public class ScheduleNowPageActions {
     * Description : It captures a screenshot of page
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void captureScreen(){
         try{
             asserr.verifyFullText(retriveData(10, 0), ScheduleNowPageLocators.heading6);
             LoggerHandler.info("Verified Heading");
             test.log(Status.INFO,"Verified Heading");
             test.log(Status.PASS, "Verified Heading");
-
+ 
             Screenshot.captureScreenshot("Tell us about your appointment needs (cont).");
             LoggerHandler.info("Captured Screenshot");
             test.log(Status.INFO,"Captured Screenshot");
             test.log(Status.PASS, "Captured Screenshot");
-            LoggerHandler.info("Verified Heading");
-            test.log(Status.PASS, "Verified Heading");
         }
         catch(Exception e){
             LoggerHandler.error("Verified Heading failed");
             test.log(Status.FAIL, "Verified Heading failed");
             Reporter.addScreenshotToReport("Verified Heading failed", test, null, driver);
-
+ 
             LoggerHandler.error("Captured Screenshot failed");
             test.log(Status.FAIL, "Captured Screenshot failed");
             Reporter.addScreenshotToReport("Captured Screenshot failed", test, null, driver);
@@ -528,7 +513,7 @@ public class ScheduleNowPageActions {
     * Description : It performs the click operation on next button
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void clickNext(){
         try{
             helper.clickByLocater(ScheduleNowPageLocators.nextButton);
@@ -549,11 +534,11 @@ public class ScheduleNowPageActions {
     * Description : It retrieves data from excel sheet by row and column
     * Return Type : String
     * Params List : int row, int column
-    */ 
+    */
     public String retriveData(int row, int column){
         try {
             return ExcelReader.readdata(System.getProperty("user.dir")+"/testdata/NikhithData.xlsx","Sheet1",row,column);
-        } 
+        }
         catch (Exception e) {
             LoggerHandler.error("Failed to retrive data");
             test.log(Status.FAIL, "Failed to retrieve data");
@@ -565,10 +550,10 @@ public class ScheduleNowPageActions {
     /*
     * Method Name : testScheduleNow
     * Author Name : Nikhith Sree Sai
-    * Description : It calls the methods that required for find doctor page actions 
+    * Description : It calls the methods that required for find doctor page actions
     * Return Type : NA
     * Params List : NA
-    */ 
+    */
     public void testScheduleNow(){
         clickScheduleNow();
         clickRequestAnAppointment();
