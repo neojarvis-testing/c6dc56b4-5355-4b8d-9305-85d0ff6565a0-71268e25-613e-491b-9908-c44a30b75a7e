@@ -18,10 +18,12 @@ public class Reporter {
             String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
             String reportsDir = System.getProperty("user.dir") + "/reports";
             String reportPath = reportsDir + "/" + (reportName.isEmpty() ? "Test_Report" : reportName) + "_" + timestamp + ".html";
-            new File(reportsDir).mkdirs();
+            new File(reportsDir).mkdirs(); // Ensure reports directory exists
+ 
             ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
             spark.config().setReportName(reportName);
-            spark.config().setDocumentTitle("Cleveland Clinic Report");
+            spark.config().setDocumentTitle("Automation Report");
+ 
             extent = new ExtentReports();
             extent.attachReporter(spark);
             extent.setSystemInfo("OS", System.getProperty("os.name"));
@@ -35,11 +37,11 @@ public class Reporter {
             String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
             String screenshotPath = System.getProperty("user.dir") + "/reports/" + filename + "_" + timestamp + ".png";
             File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            org.apache.commons.io.FileUtils.copyFile(src, new File(screenshotPath));
+            org.apache.commons.io.FileUtils.copyFile(src, new File(screenshotPath)); // Save the screenshot
+ 
             test.info(description, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
- 

@@ -31,16 +31,32 @@ public class TestRunner extends Base {
     public void open(){
         openBrowser();
     }
+    /*
+    * a. Method name : testCase01
+    * b. Author : Dharen
+    * c. Description : This test method creates a TestNG test report for "TestCase01" and executes the respiratory-related test actions from the RespiratoryPageActions class.
+    * d. Return type : void
+    * e. Parameter list : None
+    */
     @Test
     public void testCase01() {
-        test=reports.createTest("TestCase01");
-        RespiratoryPageActions respiratory=new RespiratoryPageActions(test);
+        test = reports.createTest("TestCase01");
+        // Instantiate the RespiratoryPageActions object with the test instance
+        RespiratoryPageActions respiratory = new RespiratoryPageActions(test);
         respiratory.respiratorytest();
     }
+    /*
+    * a. Method name : testCase02
+    * b. Author : Dharen
+    * c. Description : This test method creates a TestNG test report for "TestCase02" and executes Ohio-specific test actions from the OhioPageActions class.
+    * d. Return type : void
+    * e. Parameter list : None
+    */
     @Test
     public void testCase02() {
-        test=reports.createTest("TestCase02");
-        OhioPageActions ohio=new OhioPageActions(test);
+        test = reports.createTest("TestCase02");
+        // Instantiate the OhioPageActions object with the test instance
+        OhioPageActions ohio = new OhioPageActions(test);
         ohio.ohiotest();
     }
     @Test
@@ -72,14 +88,14 @@ public class TestRunner extends Base {
     public void testCase1() {
         test = reports.createTest("TestCase05");
         HealthLibraryPageActions hpa = new HealthLibraryPageActions(test);
-        hpa.test1();
+        hpa.HealthLibraryTestcase();
     }
  
     @Test
     public void testcase2() {
         test = reports.createTest("TestCase06");
         ForProvidersPageActions fpa=new ForProvidersPageActions(test);
-        fpa.test2();
+        fpa.ForProvidersTestcase();
     }
     @Test
     public void healthTest(){
@@ -98,7 +114,7 @@ public class TestRunner extends Base {
         driver.quit();
     }
     @AfterClass
-    public void flush() {
-        reports.flush();
-    }
+	   public void wrapUp() {
+	       reports.flush();
+	   }
 }
