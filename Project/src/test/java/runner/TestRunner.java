@@ -57,7 +57,7 @@ public class TestRunner extends Base {
         fda.testFindDoctor();
     }
     @Test
-    public void FooterTestCase(){
+    public void footerTestCase(){
         test = reports.createTest("Institute And Department Test");
         InstituteAndDepartmentPage institute = new InstituteAndDepartmentPage(driver,test);
         institute.mergeInstituteAndDepartment();
@@ -84,7 +84,7 @@ public class TestRunner extends Base {
     @Test
     public void healthTest(){
         test= reports.createTest("Testcase 09");
-        HealthAction ha= new HealthAction();
+        HealthAction ha= new HealthAction(test);
         ha.allHealth();
     }
     @Test
