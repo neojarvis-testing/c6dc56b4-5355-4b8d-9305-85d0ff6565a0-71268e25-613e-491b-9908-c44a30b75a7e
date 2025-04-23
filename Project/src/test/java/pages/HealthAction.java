@@ -1,12 +1,12 @@
 package pages;
-
+ 
 import uistore.HealthPageLocators;
 import utils.Base;
 import utils.WebDriverHelper;
-
+ 
 public class HealthAction {
     public WebDriverHelper helper;
-
+ 
     public HealthAction(){
         helper= new WebDriverHelper(Base.driver);
     }
@@ -25,7 +25,7 @@ public class HealthAction {
             e.getMessage();
         }
     }
-
+ 
     public void enterEyes(){
         try{
             helper.clickByLocater(HealthPageLocators.searchBar);
@@ -51,7 +51,7 @@ public class HealthAction {
             e.getMessage();
         }
     }
-
+ 
     public void allHealth(){
         clickOnHealthLibrary();
         clickOnBody();
@@ -59,5 +59,4 @@ public class HealthAction {
         clickOnEye();
         clickOnRedEye();
     }
-
 }

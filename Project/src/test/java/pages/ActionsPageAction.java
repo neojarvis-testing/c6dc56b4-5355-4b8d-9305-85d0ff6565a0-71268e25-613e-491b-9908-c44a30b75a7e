@@ -1,13 +1,13 @@
 package pages;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.ActionsPageLocators;
 import utils.Assertion;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
-
+ 
 public class ActionsPageAction {
     public WebDriverHelper helper;
     ExtentTest test;
@@ -56,7 +56,7 @@ public class ActionsPageAction {
         LoggerHandler.error("Insurance Url is not verified");
         test.log(Status.FAIL,"Insurance Url is not verified");
      }
-
+ 
    }
    public void clickOnEvent(){
     try{
@@ -209,7 +209,7 @@ public void clickonCleveImg(){
         test.log(Status.FAIL,"CleveLand Img Url is not verified");
      }
 }
-
+ 
    public void allActions(){
       verifyActionsSec();
       clickOnAppointments();
@@ -226,3 +226,4 @@ public void clickonCleveImg(){
       clickonCleveImg();
    }
 }
+ 

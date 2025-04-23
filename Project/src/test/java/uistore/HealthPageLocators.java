@@ -1,7 +1,7 @@
 package uistore;
-
+ 
 import org.openqa.selenium.By;
-
+ 
 public class HealthPageLocators {
     public static By healthLibrary=By.cssSelector("a.nav--secondary__link[href='/health']");
     public static By bodyOrgans= By.cssSelector("a[href='/health/body'] h3");

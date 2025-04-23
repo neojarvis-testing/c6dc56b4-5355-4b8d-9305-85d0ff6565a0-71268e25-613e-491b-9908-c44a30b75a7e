@@ -1,7 +1,7 @@
 package uistore;
-
+ 
 import org.openqa.selenium.By;
-
+ 
 public class ActionsPageLocators {
      public static By appointments= By.cssSelector("a[title='Appointments']");
      public static By acceptedInsu= By.cssSelector("a[title='Accepted Insurance']");
