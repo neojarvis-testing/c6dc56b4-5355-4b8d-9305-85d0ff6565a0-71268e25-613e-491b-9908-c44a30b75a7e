@@ -2,11 +2,15 @@ package pages;
  
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.ForProvidersPageLocators;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.Reporter;
+
+import uistore.ForProvidersPageLocators;
+import utils.Base;
+import utils.LoggerHandler;
 import utils.WebDriverHelper;
  
 public class ForProvidersPageActions {
@@ -17,7 +21,7 @@ public ForProvidersPageActions(ExtentTest test) {
     this.test=test;
     helper=new WebDriverHelper(Base.driver);
 }
-
+ 
   /*
      * a. MethodName: forProviders
      * b. AuthorName: Arun Kumar
@@ -59,6 +63,8 @@ public void join(){
     test.log(Status.PASS,"Switched to new tab");
     Base.driver.close();
     helper.goBackToWindow(0);
+    LoggerHandler.info("Clicked on Join Our Nursing");
+    test.log(Status.PASS,"Clicked on Join Our Nursing");
     }
     catch(Exception e){
         LoggerHandler.error("Clicked on JoinOurNursing Failed");
@@ -110,6 +116,27 @@ public void career(){
         LoggerHandler.error("Switched to new tab Failed");
         test.log(Status.FAIL,"Switched to new tab Failed");
         Reporter.addScreenshotToReport("careers failed", test, "careers failed", null);
+        LoggerHandler.error("Clicked on Join Our Nursing Failed");
+        test.log(Status.FAIL,"Clicked on Join Our Nursing Failed");
+    }
+}  
+ 
+public void carrer(){
+    try {
+        helper.scrollToAnElement(ForProvidersPageLocators.forproviders);
+        helper.waitForElementToBeVisible(ForProvidersPageLocators.careers, 10);
+        helper.clickByLocater(ForProvidersPageLocators.careers);
+        helper.waitForElementToBeVisible(ForProvidersPageLocators.careers, 10);
+        helper.hoverByLocater(ForProvidersPageLocators.findcareer);
+        helper.clickByLocater(ForProvidersPageLocators.findcareer);
+        helper.switchToNewTab();
+        Base.driver.close();
+        helper.goBackToWindow(0);
+        LoggerHandler.info("Clicked on carrer");
+        test.log(Status.PASS,"Clicked on carrer");
+    } catch (Exception e) {
+        LoggerHandler.error("Clicked on carrer Failed");
+        test.log(Status.FAIL,"Clicked on carrer Failed");
     }
  
 }
@@ -119,7 +146,7 @@ public void career(){
      * c. Description: This is used to click on patient.
      * d. Parameters: None
      * e. Return Type: void
-     */ 
+     */
 public void patient(){
     try {
         helper.scrollToAnElement(ForProvidersPageLocators.forproviders);
@@ -147,7 +174,15 @@ public void patient(){
         LoggerHandler.error("Switched to new tab Failed");
         test.log(Status.FAIL,"Switched to new tab Failed");
         Reporter.addScreenshotToReport("Diseases failed", test, "Diseases failed", null);
-
+        helper.clickByLocater(ForProvidersPageLocators.physicianteam);
+        helper.switchToNewTab();
+        Base.driver.close();
+        helper.goBackToWindow(0);
+        LoggerHandler.info("Clicked on Patient");
+        test.log(Status.PASS,"Clicked on Patient");
+    } catch (Exception e) {
+        LoggerHandler.error("Clicked on Patient Failed");
+        test.log(Status.FAIL,"Clicked on Patient Failed");
     }
 }
 /*

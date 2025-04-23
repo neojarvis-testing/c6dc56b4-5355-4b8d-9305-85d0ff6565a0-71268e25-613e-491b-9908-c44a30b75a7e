@@ -67,7 +67,7 @@ public class HealthLibraryPageActions {
             Reporter.addScreenshotToReport("Diseases failed", test, "Diseases failed", null);
         }
     }
-
+ 
      /*
      * a. MethodName: diagnostics
      * b. AuthorName: Arun Kumar
@@ -95,7 +95,7 @@ public class HealthLibraryPageActions {
             Reporter.addScreenshotToReport("Diagnostics failed", test, "Diagnostics failed", null);
         }
     }
-
+ 
      /*
      * a. MethodName: treatments
      * b. AuthorName: Arun Kumar
@@ -149,7 +149,7 @@ public class HealthLibraryPageActions {
             Reporter.addScreenshotToReport("BodySystems failed", test, "BodySystems failed", null);
         }
     }
-
+ 
      /*
      * a. MethodName: drugs
      * b. AuthorName: Arun Kumar
@@ -177,7 +177,7 @@ public class HealthLibraryPageActions {
      * d. Parameters: None
      * e. Return Type: void
      */
-
+ 
     public void HealthLibraryTestcase(){
             health();
             diseases();
