@@ -1,7 +1,7 @@
 package uistore;
-
+ 
 import org.openqa.selenium.By;
-
+ 
 public class HealthLibraryPageLocators {
     public static By backHealth=By.xpath("//a[text()='Home']");
     public static By HealthHeading=By.xpath("//div[text()='Health Library']");
