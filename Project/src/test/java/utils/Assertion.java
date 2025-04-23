@@ -41,4 +41,3 @@ public class Assertion {
         Assert.assertTrue(actualText.contains(expectedText));
     }
 }
- 

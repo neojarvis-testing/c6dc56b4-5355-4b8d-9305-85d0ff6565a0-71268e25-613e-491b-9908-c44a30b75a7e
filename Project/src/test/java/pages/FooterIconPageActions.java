@@ -1,28 +1,28 @@
 package pages;
-
-
+ 
+ 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.FooterIconPageLocators;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
-
+ 
 public class FooterIconPageActions {
     ExtentReports reports;
-
+ 
     WebDriverHelper helper;
-
+ 
     ExtentTest test;
-
+ 
     public FooterIconPageActions(ExtentTest test){
         helper = new WebDriverHelper(Base.driver);
         this.test = test;
-
+ 
     }
-
+ 
     public void clickFacebook(){
         try{
             helper.scrollToAnElement(FooterIconPageLocators.facebook);
@@ -37,12 +37,12 @@ public class FooterIconPageActions {
             test.log(Status.FAIL,"Clicked on Facebook Icon Failed");
         }
     }
-
-
-
+ 
+ 
+ 
     public void clickTwitter(){
         try{
-            
+           
             helper.clickByLocater(FooterIconPageLocators.twitter);
             Thread.sleep(3000);
             helper.switchToNewTab();
@@ -55,9 +55,9 @@ public class FooterIconPageActions {
             test.log(Status.FAIL,"Clicked on Twitter Icon Failed");
         }
     }
-
-
-
+ 
+ 
+ 
     public void clickYoutube(){
         try{
             helper.clickByLocater(FooterIconPageLocators.youtube);
@@ -72,7 +72,7 @@ public class FooterIconPageActions {
             test.log(Status.FAIL,"Clicked on Youtube Icon Failed");
         }
     }
-
+ 
     public void clickInstagram(){
         try{
             helper.clickByLocater(FooterIconPageLocators.instagram);
@@ -87,7 +87,7 @@ public class FooterIconPageActions {
             test.log(Status.FAIL,"Clicked on Instagram Icon Failed");
         }
     }
-
+ 
     public void clickLinkdin(){
         try{
             helper.clickByLocater(FooterIconPageLocators.linkdin);
@@ -102,7 +102,7 @@ public class FooterIconPageActions {
             test.log(Status.FAIL,"Clicked on Linkedin Icon Failed");
         }
     }
-
+ 
     public void clickpintrest(){
         try{
             helper.clickByLocater(FooterIconPageLocators.pinterest);
@@ -117,7 +117,7 @@ public class FooterIconPageActions {
             test.log(Status.FAIL,"Clicked on Pinterest Icon Failed");
         }
     }
-
+ 
     public void clicksnapchat(){
         try{
             helper.clickByLocater(FooterIconPageLocators.snapchat);
@@ -132,7 +132,7 @@ public class FooterIconPageActions {
             test.log(Status.FAIL,"Clicked on Snapchat Icon Failed");
         }
     }
-
+ 
     public void footerTestCase(){
         clickFacebook();
         clickTwitter();
@@ -141,9 +141,9 @@ public class FooterIconPageActions {
         clickLinkdin();
         clickpintrest();
         clicksnapchat();
-
+ 
     }
-
-
-
+ 
+ 
+ 
 }
