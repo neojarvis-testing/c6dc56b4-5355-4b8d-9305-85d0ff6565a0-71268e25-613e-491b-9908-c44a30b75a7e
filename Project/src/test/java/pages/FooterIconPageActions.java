@@ -3,18 +3,18 @@ package pages;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
- 
+
 import uistore.FooterIconPageLocators;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.Reporter;
 import utils.WebDriverHelper;
- 
+
 public class FooterIconPageActions {
     ExtentReports reports;
- 
+
     WebDriverHelper helper;
- 
+
     ExtentTest test;
  
     /*
@@ -228,4 +228,3 @@ public class FooterIconPageActions {
         clicksnapchat();
     }
 }
-

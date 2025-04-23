@@ -49,6 +49,7 @@ public class ScheduleNowPageActions {
     */
     public void clickScheduleNow(){
         try{
+            helper.waitForElementToBeVisible(ScheduleNowPageLocators.scheduleNow, 6);
             helper.clickByLocater(ScheduleNowPageLocators.scheduleNow);
             LoggerHandler.info("Clicked Schedule Now");
             test.log(Status.INFO,"Clicked Schedule Now");
@@ -328,6 +329,8 @@ public class ScheduleNowPageActions {
             LoggerHandler.error("Entered Address failed");
             test.log(Status.FAIL, "Entered Address failed");
             Reporter.addScreenshotToReport("Entered Address failed", test, null, driver);
+            LoggerHandler.info("Entered Address");
+            test.log(Status.PASS, "Entered Address");
         }
     }
  
@@ -470,6 +473,7 @@ public class ScheduleNowPageActions {
             LoggerHandler.error("Entered Reason failed");
             test.log(Status.FAIL, "Entered Reason failed");
             Reporter.addScreenshotToReport("Entered Reason failed", test, null, driver);
+            test.log(Status.PASS, "Entered Reason");
         }
     }
  

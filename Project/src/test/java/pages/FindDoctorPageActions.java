@@ -36,7 +36,6 @@ public class FindDoctorPageActions {
         this.driver = driver;
         this.test = test;
         helper = new WebDriverHelper(driver);
-        asserr = new Assertion(driver);
     }
  
     /*
