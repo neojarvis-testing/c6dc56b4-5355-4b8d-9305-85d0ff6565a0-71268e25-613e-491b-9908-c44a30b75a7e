@@ -10,6 +10,8 @@ import uistore.InstituteAndDepartmentLocator;
 import utils.Assertion;
 import utils.Base;
 import utils.LoggerHandler;
+import utils.Reporter;
+import utils.Screenshot;
 import utils.WebDriverHelper;
  
 public class InstituteAndDepartmentPage {
@@ -39,6 +41,8 @@ public class InstituteAndDepartmentPage {
     public void clickOnBloodManagement() {
         try {
             helper.clickByLocater(InstituteAndDepartmentLocator.bloodManagement);
+            Screenshot.captureScreenshot("popup");
+            Reporter.addScreenshotToReport("popup", test, "popup", driver);
             LoggerHandler.info("Clicked on Blood Management");
             test.log(Status.PASS, "Clicked on Blood Management");
  
@@ -149,6 +153,8 @@ public class InstituteAndDepartmentPage {
             helper.clickByLocater(InstituteAndDepartmentLocator.takeTheSurvey);
             helper.switchToNewTab();
             helper.goBackToWindow(0);
+            LoggerHandler.info("verify forms");
+            test.log(Status.PASS,"verify forms");
             LoggerHandler.info("Switched tab to take the survey");
             test.log(Status.PASS, "Switched tab to take the survey");
         } catch (Exception e) {
@@ -204,8 +210,8 @@ public class InstituteAndDepartmentPage {
     public void clickOnParking() {
         try {
             helper.clickByLocater(InstituteAndDepartmentLocator.parking);
-            LoggerHandler.info("Click on Parking");
-            test.log(Status.PASS, "Click on Parking");
+            LoggerHandler.info("click on parking");
+            test.log(Status.PASS, "click on parking");
         } catch (Exception e) {
             LoggerHandler.error("Failed Clicked on Parking");
             test.log(Status.FAIL, "Failed Clicked on Parking");

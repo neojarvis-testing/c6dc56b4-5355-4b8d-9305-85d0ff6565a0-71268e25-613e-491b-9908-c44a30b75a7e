@@ -28,6 +28,7 @@ public class HealthLibraryPageActions {
             test.log(Status.PASS,"Scrolled till Health Library");
         }catch(Exception e){
             LoggerHandler.error("Scrolled failed till Health Library");
+            test.log(Status.FAIL,"Scrolled failed till Health Library");
         }
     }
  
@@ -37,8 +38,11 @@ public class HealthLibraryPageActions {
             helper.clickByLocater(HealthLibraryPageLocators.Diseases);
             helper.clickByLocater(HealthLibraryPageLocators.backHealth);
             helper.scrollToAnElement(HealthLibraryPageLocators.HealthHeading);
+            LoggerHandler.info("Clicked on Diseases");
+            test.log(Status.PASS,"Clicked on Diseases");
         }catch(Exception e){
-            e.printStackTrace();
+            LoggerHandler.error("Clicked on Diseases failed");
+            test.log(Status.FAIL,"Clicked on Diseases failed");
         }
     }
  
@@ -47,9 +51,12 @@ public class HealthLibraryPageActions {
             helper.clickByLocater(HealthLibraryPageLocators.Diagnostics);
             helper.clickByLocater(HealthLibraryPageLocators.backHealth);
             helper.scrollToAnElement(HealthLibraryPageLocators.HealthHeading);
+            LoggerHandler.info("Clicked on Diagnostics");
+            test.log(Status.PASS,"Clicked on Diagnostics");
  
         }catch(Exception e){
-            e.printStackTrace();
+            LoggerHandler.error("Clicked on Diagnostics failed");
+            test.log(Status.FAIL,"Clicked on Diseases failed");
         }
     }
     public void Treatments(){
@@ -57,9 +64,12 @@ public class HealthLibraryPageActions {
             helper.clickByLocater(HealthLibraryPageLocators.Treatments);
             helper.clickByLocater(HealthLibraryPageLocators.backHealth);
             helper.scrollToAnElement(HealthLibraryPageLocators.HealthHeading);
+            LoggerHandler.info("Clicked on Treatments");
+            test.log(Status.PASS,"Clicked on Treatments");
            
         }catch(Exception e){
-            e.printStackTrace();
+            LoggerHandler.error("Clicked on Treatments failed");
+            test.log(Status.FAIL,"Clicked on Treatments failed");
         }
     }
  
@@ -68,17 +78,23 @@ public class HealthLibraryPageActions {
             helper.clickByLocater(HealthLibraryPageLocators.BodySystems);
             helper.clickByLocater(HealthLibraryPageLocators.backHealth);
             helper.scrollToAnElement(HealthLibraryPageLocators.HealthHeading);
+            LoggerHandler.info("Clicked on BodySystems");
+            test.log(Status.PASS,"Clicked on BodySystems");
         }catch(Exception e){
-            e.printStackTrace();
+            LoggerHandler.error("Clicked on BodySystems failed");
+            test.log(Status.FAIL,"Clicked on BodySystems failed");
         }
     }
  
     public void Drugs(){
         try{
             helper.clickByLocater(HealthLibraryPageLocators.DrugsDevices);
+            LoggerHandler.info("Clicked on Drugs");
+            test.log(Status.PASS,"Clicked on Drugs");
  
         }catch(Exception e){
- 
+            LoggerHandler.error("Clicked on Drugs failed");
+            test.log(Status.FAIL,"Clicked on Drugsfailed");
         }
     }
  
