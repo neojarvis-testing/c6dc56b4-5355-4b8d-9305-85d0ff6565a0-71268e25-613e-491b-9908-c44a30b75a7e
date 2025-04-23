@@ -11,12 +11,12 @@ public class Assertion {
         this.driver = driver;
     }
  
-    public void verifyFullTitle(String expectedTitle) {
+    public void verifyFullPageTitle(String expectedTitle) {
         String actualTitle = driver.getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);
     }
  
-    public void verifyPartialTitle(String expectedTitle) {
+    public void verifyPartialPageTitle(String expectedTitle) {
         String actualTitle = driver.getTitle();
         Assert.assertTrue(actualTitle.contains(expectedTitle));
     }
