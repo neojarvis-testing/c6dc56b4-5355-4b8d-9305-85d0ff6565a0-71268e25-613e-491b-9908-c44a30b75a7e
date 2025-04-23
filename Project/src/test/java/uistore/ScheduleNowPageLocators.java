@@ -1,13 +1,13 @@
 package uistore;
-
+ 
 import org.openqa.selenium.By;
-
+ 
 public class ScheduleNowPageLocators {
     public static By scheduleNow = By.xpath("//a[text()='Schedule now']");
     public static By requestAppointment = By.xpath("(//a[@href='/webappointment'])[1]");
-    public static By getStarted = By.cssSelector(".btn--primary");
+    public static By getStarted = By.cssSelector("button.btn--primary");
     public static By heading1 = By.xpath("//h1[text()='Who is this request for?']");
-    public static By meButton = By.cssSelector(".btn--myself ");
+    public static By meButton = By.xpath("//button[text()='Not sure']");
     public static By heading2 = By.xpath("//h1[text()='Have you received care at Cleveland Clinic within the last three years?']");
     public static By notSureButton = By.cssSelector(".btn--not-sure ");
     public static By heading3 = By.xpath("//h1[text()='Please help us get to know you better.']");

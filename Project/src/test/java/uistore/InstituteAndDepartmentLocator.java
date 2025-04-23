@@ -17,7 +17,7 @@ public class InstituteAndDepartmentLocator {
     public static By refusingABloodTransfusion = By.xpath("//a[text()='Refusing a Blood Transfusion']");
     public static By locations = By.xpath("(//a[text()='Locations'])[1]");
     public static By contactsBloodManagement = By.xpath("(//a[text()='Contact Us'])[1]");
-
+ 
     //Pharmacy
     public static By pharmacy = By.cssSelector("a[href='/departments/pharmacy']");
     //below one will switch the tab

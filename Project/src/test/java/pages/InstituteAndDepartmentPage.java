@@ -13,7 +13,7 @@ import utils.LoggerHandler;
 import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
-
+ 
 /*
  * Class Name: InstituteAndDepartmentPage
  * Author Name: Prithviraj Seth
@@ -26,16 +26,18 @@ public class InstituteAndDepartmentPage {
     public static WebDriverHelper helper;
     ExtentTest test;
 
+ 
     Assertion assertion = new Assertion(Base.driver);
-
+ 
     public InstituteAndDepartmentPage(WebDriver driver, ExtentTest test) {
         this.driver = driver;
         helper = new WebDriverHelper(driver);
         this.test = test;
+
     }
 
     // Institute and Department
-
+ 
     /*
      * Method Name: clickOnInstituteAndDepartment
      * Author Name: Prithviraj Seth
@@ -59,7 +61,7 @@ public class InstituteAndDepartmentPage {
     }
 
     // Blood Management
-
+ 
     /*
      * Method Name: clickOnBloodManagement
      * Author Name: Prithviraj Seth
@@ -84,9 +86,9 @@ public class InstituteAndDepartmentPage {
             test.log(Status.FAIL, "Clicked on Blood Management failed");
             Reporter.addScreenshotToReport("Clicked on Blood Management failed", test, "Clicked on Blood Management failed", driver);
         }
-
+ 
     }
-
+ 
     /*
      * Method Name: clickOnFrequentlyAskedQuestion
      * Author Name: Prithviraj Seth
@@ -100,15 +102,15 @@ public class InstituteAndDepartmentPage {
             LoggerHandler.info("Clicked on Frequently Asked Question");
             test.log(Status.INFO, "Clicked on Frequently Asked Question");
             test.log(Status.PASS, "Clicked on Frequently Asked Question");
-            
+           
         } catch (Exception e) {
             LoggerHandler.error("Clicked on Frequently Asked Question failed");
             test.log(Status.FAIL, "Clicked on Frequently Asked Question failed");
             Reporter.addScreenshotToReport("Clicked on Frequently Asked Question failed", test, "Clicked on Frequently Asked Question failed", driver);
         }
-
+ 
     }
-
+ 
     /*
      * Method Name: clickOnPreparingForSurgery
      * Author Name: Prithviraj Seth
@@ -128,7 +130,7 @@ public class InstituteAndDepartmentPage {
             Reporter.addScreenshotToReport("Clicked on Preparing For Surgery failed", test, "Clicked on Preparing For Surgery failed", driver);
         }
     }
-
+ 
     /*
      * Method Name: clickOnAnemia
      * Author Name: Prithviraj Seth
@@ -148,7 +150,7 @@ public class InstituteAndDepartmentPage {
             Reporter.addScreenshotToReport("Clicked on Anemia failed", test, "Clicked on Anemia failed", driver);
         }
     }
-
+ 
     /*
      * Method Name: clickOnRefusingABloodTransfusion
      * Author Name: Prithviraj Seth
@@ -168,9 +170,9 @@ public class InstituteAndDepartmentPage {
             test.log(Status.FAIL, "Clicked on Refusing A Blood Transfusion failed");
             Reporter.addScreenshotToReport("Clicked on Refusing A Blood Transfusion failed", test, "Clicked on Refusing A Blood Transfusion failed", driver);
         }
-
+ 
     }
-
+ 
     /*
      * Method Name: clickOnLocations
      * Author Name: Prithviraj Seth
@@ -189,9 +191,9 @@ public class InstituteAndDepartmentPage {
             test.log(Status.FAIL, "Clicked on Locations failed");
             Reporter.addScreenshotToReport("Clicked on Locations failed", test, "Clicked on Locations failed", driver);
         }
-
+ 
     }
-
+ 
     /*
      * Method Name: clickOnContactsBloodManagement
      * Author Name: Prithviraj Seth
@@ -213,7 +215,7 @@ public class InstituteAndDepartmentPage {
 
     }
     // Pharmacy
-
+ 
     /*
      * Method Name: clickOnPharmacy
      * Author Name: Prithviraj Seth
@@ -230,7 +232,6 @@ public class InstituteAndDepartmentPage {
             Base.driver.navigate().back();
             Base.driver.navigate().back();
             Base.driver.navigate().back();
-            // Base.driver.navigate().to("https://my.clevelandclinic.org/departments");
             helper.clickByLocater(InstituteAndDepartmentLocator.pharmacy);
             LoggerHandler.info("Clicked on Pharmacy");
             test.log(Status.INFO, "Clicked on Pharmacy");
@@ -239,11 +240,11 @@ public class InstituteAndDepartmentPage {
             LoggerHandler.error("Clicked on Pharmacy failed");
             test.log(Status.FAIL, "Clicked on Pharmacy failed");
             Reporter.addScreenshotToReport("Clicked on Pharmacy failed", test, "Clicked on Pharmacy failed", driver);
-
+ 
         }
 
     }
-
+ 
     /*
      * Method Name: switchTabToTakeTheSurvey
      * Author Name: Prithviraj Seth
@@ -258,6 +259,8 @@ public class InstituteAndDepartmentPage {
             helper.clickByLocater(InstituteAndDepartmentLocator.takeTheSurvey);
             helper.switchToNewTab();
             helper.goBackToWindow(0);
+            LoggerHandler.info("verify forms");
+            test.log(Status.PASS,"verify forms");
             LoggerHandler.info("Switched tab to take the survey");
             test.log(Status.INFO, "Switched tab to take the survey");
             test.log(Status.PASS, "Switched tab to take the survey");
@@ -274,7 +277,7 @@ public class InstituteAndDepartmentPage {
     }
 
     // Contact Us
-
+ 
     /*
      * Method Name: clickOnContactUs
      * Author Name: Prithviraj Seth
@@ -295,9 +298,9 @@ public class InstituteAndDepartmentPage {
             test.log(Status.FAIL, "Clicked on Contact us failed");
             Reporter.addScreenshotToReport("Clicked on Contact us failed", test, "Clicked on Contact us failed", driver);
         }
-
+ 
     }
-
+ 
     /*
      * Method Name: clickOnContactClevelandClinic
      * Author Name: Prithviraj Seth
@@ -320,7 +323,7 @@ public class InstituteAndDepartmentPage {
     }
 
     // Need Help
-
+ 
     /*
      * Method Name: clickOnNeedHelp
      * Author Name: Prithviraj Seth
@@ -330,7 +333,6 @@ public class InstituteAndDepartmentPage {
      */
     public void clickOnNeedHelp() {
         try {
-            helper.waitForElementToBeVisible(InstituteAndDepartmentLocator.needHelp, 10);
             helper.waitForElementToBeClickable(InstituteAndDepartmentLocator.needHelp, 10);
             helper.clickByLocater(InstituteAndDepartmentLocator.needHelp);
             LoggerHandler.info("Clicked on Need Help");
@@ -341,9 +343,9 @@ public class InstituteAndDepartmentPage {
             test.log(Status.FAIL, "Clicked on Need Help failed");
             Reporter.addScreenshotToReport("Clicked on Need Help failed", test, "Clicked on Need Help failed", driver);
         }
-
+ 
     }
-
+ 
     /*
      * Method Name: clickOnParking
      * Author Name: Prithviraj Seth
@@ -363,9 +365,9 @@ public class InstituteAndDepartmentPage {
             test.log(Status.FAIL, "Failed Clicked on Parking failed");
             Reporter.addScreenshotToReport("Failed Clicked on Parking failed", test, "Failed Clicked on Parking failed", driver);
         }
-
+ 
     }
-
+ 
     /*
      * Method Name: clickOnTravelAssistance
      * Author Name: Prithviraj Seth
@@ -384,9 +386,9 @@ public class InstituteAndDepartmentPage {
             test.log(Status.FAIL, "Clicked on Travel Assistance failed");
             Reporter.addScreenshotToReport("Clicked on Travel Assistance failed", test, "Clicked on Travel Assistance failed", driver);
         }
-
+ 
     }
-
+ 
     /*
      * Method Name: clickOnGlobalPatientServices
      * Author Name: Prithviraj Seth
@@ -405,9 +407,9 @@ public class InstituteAndDepartmentPage {
             test.log(Status.FAIL, "Clicked on Global Patient Services failed");
             Reporter.addScreenshotToReport("Clicked on Global Patient Services failed", test, "Clicked on Global Patient Services failed", driver);
         }
-
+ 
     }
-
+ 
     /*
      * Method Name: clickOnSpeakWithOurTeam
      * Author Name: Prithviraj Seth
@@ -426,9 +428,9 @@ public class InstituteAndDepartmentPage {
             test.log(Status.FAIL, "Clicked on Speak With Our Team failed");
             Reporter.addScreenshotToReport("Clicked on Speak With Our Team failed", test, "Clicked on Speak With Our Team failed", driver);
         }
-
+ 
     }
-
+ 
     /*
      * Method Name: clickOnVirtualSecondOpinion
      * Author Name: Prithviraj Seth
@@ -449,9 +451,9 @@ public class InstituteAndDepartmentPage {
             test.log(Status.FAIL, "Clicked on Virtual Second Opinion failed");
             Reporter.addScreenshotToReport("Clicked on Virtual Second Opinion failed", test, "Clicked on Virtual Second Opinion failed", driver);
         }
-
+ 
     }
-
+ 
     /*
      * Method Name: clickOnGetStarted
      * Author Name: Prithviraj Seth
@@ -470,11 +472,11 @@ public class InstituteAndDepartmentPage {
             test.log(Status.FAIL, "Clicked on Get Started failed");
             Reporter.addScreenshotToReport("Clicked on Get Started failed", test, "Clicked on Get Started failed", driver);
         }
-
+ 
     }
-
+ 
     // Merged Lines
-
+ 
     /*
      * Method Name: mergeInstituteAndDepartment
      * Author Name: Prithviraj Seth
