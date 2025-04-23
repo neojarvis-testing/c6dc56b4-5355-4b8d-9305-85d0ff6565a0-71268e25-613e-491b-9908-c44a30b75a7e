@@ -32,7 +32,7 @@ public class ScheduleNowPageActions {
             LoggerHandler.info("Clicked Schedule Now");
             test.log(Status.PASS, "Clicked Schedule Now");
  
-            //asserr.verifyFullTitle(retriveData(0, 0));
+           // asserr.verifyFullTitle(retriveData(0, 0));
             LoggerHandler.info("Verified Title");
             test.log(Status.PASS, "Verified Title");
         }
@@ -44,49 +44,57 @@ public class ScheduleNowPageActions {
  
     public void clickRequestAnAppointment(){
         try{
-            helper.waitForElementToBeVisible(ScheduleNowPageLocators.requestAppointment, 6);
+            helper.waitForElementToBeVisible(ScheduleNowPageLocators.requestAppointment,6);
             helper.clickByLocater(ScheduleNowPageLocators.requestAppointment);
             //asserr.verifyFullTitle(retriveData(1, 0));
+            LoggerHandler.info("Clicked on Request an Appointment");
+            test.log(Status.PASS, "Clicked on Request an Appointment");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Clicked on Request an Appointment failed");
+            test.log(Status.FAIL, "Clicked on Request an Appointment failed");
         }
     }
  
     public void clickGetStarted(){
         try{
-            helper.waitForElementToBeVisible(ScheduleNowPageLocators.getStarted, 6);
+            helper.waitForElementToBeVisible(ScheduleNowPageLocators.heading1, 6);
             helper.clickByLocater(ScheduleNowPageLocators.getStarted);
-           // asserr.verifyFullText(retriveData(2, 0),ScheduleNowPageLocators.heading1);
+            //asserr.verifyFullText(retriveData(2, 0),ScheduleNowPageLocators.heading1);
+            LoggerHandler.info("Clicked on Get Started");
+            test.log(Status.PASS, "Clicked on Get Started");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Clicked on Get Started failed");
+            test.log(Status.FAIL, "Clicked on Get Started failed");
         }
     }
  
     public void clickMe(){
         try{
-            helper.waitForElementToBeVisible(ScheduleNowPageLocators.meButton, 6);
+            helper.waitForElementToBeVisible(ScheduleNowPageLocators.meButton, 4);
             helper.clickByLocater(ScheduleNowPageLocators.meButton);
-           // asserr.verifyFullText(retriveData(3, 0), ScheduleNowPageLocators.heading2);
+            //asserr.verifyFullText(retriveData(3, 0), ScheduleNowPageLocators.heading2);
+            LoggerHandler.info("Clicked on Me");
+            test.log(Status.PASS, "Clicked on Me");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Clicked on Me failed");
+            test.log(Status.FAIL, "Clicked on Me failed");
         }
     }
  
     public void clickNotSure(){
         try{
-            helper.waitForElementToBeVisible(ScheduleNowPageLocators.notSureButton, 6);
+            helper.waitForElementToBeVisible(ScheduleNowPageLocators.notSureButton,6);
             helper.clickByLocater(ScheduleNowPageLocators.notSureButton);
             //asserr.verifyFullText(retriveData(4, 0), ScheduleNowPageLocators.heading3);
+            LoggerHandler.info("Clicked on NotSure");
+            test.log(Status.PASS, "Clicked on NotSure");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Clicked on NotSure failed");
+            test.log(Status.FAIL, "Clicked on NotSure failed");
         }
     }
  
@@ -94,10 +102,12 @@ public class ScheduleNowPageActions {
         try{
             helper.clickByLocater(ScheduleNowPageLocators.firstName);
             helper.sendData(ScheduleNowPageLocators.firstName, retriveData(5, 0));
+            LoggerHandler.info("Entered First Name");
+            test.log(Status.PASS, "Entered First Name");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Entered First Name failed");
+            test.log(Status.FAIL, "Entered First Name failed");
         }
     }
  
@@ -105,30 +115,36 @@ public class ScheduleNowPageActions {
         try{
             helper.clickByLocater(ScheduleNowPageLocators.lastName);
             helper.sendData(ScheduleNowPageLocators.lastName,retriveData(5, 1));
+            LoggerHandler.info("Entered Last Name");
+            test.log(Status.PASS, "Entered Last Name");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Entered Last Name failed");
+            test.log(Status.FAIL, "Entered Last Name failed");
         }
     }
  
     public void selectGender(){
         try{
             helper.dropDown(ScheduleNowPageLocators.gender, retriveData(5, 2));
+            LoggerHandler.info("Select Gender");
+            test.log(Status.PASS, "Select Gender");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Select Gender failed");
+            test.log(Status.FAIL, "Select Gender failed");
         }
     }
  
     public void selectMaritalStatus(){
         try{
             helper.dropDown(ScheduleNowPageLocators.maritalStatus, retriveData(5, 3));
+            LoggerHandler.info("Select Marital Status");
+            test.log(Status.PASS, "Select Marital Status");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Select Marital Status failed");
+            test.log(Status.FAIL, "Select Marital Status failed");
         }
     }
  
@@ -136,10 +152,12 @@ public class ScheduleNowPageActions {
         try{
             helper.clickByLocater(ScheduleNowPageLocators.dateOfBirth);
             helper.sendData(ScheduleNowPageLocators.dateOfBirth,retriveData(5, 4));
+            LoggerHandler.info("Entered Date Of Birth");
+            test.log(Status.PASS, "Entered Date Of Birth");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Entered Date Of Birth failed");
+            test.log(Status.FAIL, "Entered Date Of Birth failed");
         }
     }
  
@@ -148,10 +166,12 @@ public class ScheduleNowPageActions {
             asserr.verifyFullText(retriveData(6,0),ScheduleNowPageLocators.heading4);
             helper.clickByLocater(ScheduleNowPageLocators.address);
             helper.sendData(ScheduleNowPageLocators.address,retriveData(7, 0));
+            LoggerHandler.info("Entered Address");
+            test.log(Status.PASS, "Entered Address");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Entered Address failed");
+            test.log(Status.FAIL, "Entered Address failed");
         }
     }
  
@@ -159,10 +179,12 @@ public class ScheduleNowPageActions {
         try{
             helper.clickByLocater(ScheduleNowPageLocators.city);
             helper.sendData(ScheduleNowPageLocators.city,retriveData(7, 1));
+            LoggerHandler.info("Entered City");
+            test.log(Status.PASS, "Entered City");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Entered City failed");
+            test.log(Status.FAIL, "Entered City failed");
         }
     }
  
@@ -170,10 +192,12 @@ public class ScheduleNowPageActions {
         try{
             helper.clickByLocater(ScheduleNowPageLocators.state);
             helper.sendData(ScheduleNowPageLocators.state,retriveData(7, 2));
+            LoggerHandler.info("Selected state");
+            test.log(Status.PASS, "Selected state");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Selecting state failed");
+            test.log(Status.FAIL, "Selecting state failed");
         }
     }
  
@@ -181,10 +205,12 @@ public class ScheduleNowPageActions {
         try{
             helper.clickByLocater(ScheduleNowPageLocators.zipCode);
             helper.sendData(ScheduleNowPageLocators.zipCode,retriveData(7, 3));
+            LoggerHandler.info("Entered Zipcode");
+            test.log(Status.PASS, "Entered Zipcode");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Entering Zipcode failed");
+            test.log(Status.FAIL, "Entering Zipcode failed");
         }
     }
  
@@ -192,10 +218,12 @@ public class ScheduleNowPageActions {
         try{
             helper.clickByLocater(ScheduleNowPageLocators.email);
             helper.sendData(ScheduleNowPageLocators.email,retriveData(7, 4));
+            LoggerHandler.info("Entered Email");
+            test.log(Status.PASS, "Entered Email");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Entered Email failed");
+            test.log(Status.FAIL, "Entered Email failed");
         }
     }
  
@@ -203,10 +231,12 @@ public class ScheduleNowPageActions {
         try{
             helper.clickByLocater(ScheduleNowPageLocators.phoneNumber);
             helper.sendData(ScheduleNowPageLocators.phoneNumber,retriveData(7, 5));
+            LoggerHandler.info("Entered Phone Number");
+            test.log(Status.PASS, "Entered Phone Number");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Entered Phone Number failed");
+            test.log(Status.FAIL, "Entered Phone Number failed");
         }
     }
  
@@ -215,10 +245,12 @@ public class ScheduleNowPageActions {
             asserr.verifyFullText(retriveData(8, 0), ScheduleNowPageLocators.heading5);
             helper.clickByLocater(ScheduleNowPageLocators.reason);
             helper.sendData(ScheduleNowPageLocators.reason, retriveData(9, 0));
+            LoggerHandler.info("Entered Reason");
+            test.log(Status.PASS, "Entered Reason");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Entered Reason failed");
+            test.log(Status.FAIL, "Entered Reason failed");
         }
     }
  
@@ -226,20 +258,24 @@ public class ScheduleNowPageActions {
         try{
             asserr.verifyFullText(retriveData(10, 0), ScheduleNowPageLocators.heading6);
             Screenshot.captureScreenshot("Tell us about your appointment needs (cont).");
+            LoggerHandler.info("Verified Heading");
+            test.log(Status.PASS, "Verified Heading");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Verified Heading failed");
+            test.log(Status.FAIL, "Verified Heading failed");
         }
     }
  
     public void clickNext(){
         try{
             helper.clickByLocater(ScheduleNowPageLocators.nextButton);
+            LoggerHandler.info("Clicked on Next");
+            test.log(Status.PASS, "Clicked on Next");
         }
         catch(Exception e){
-            LoggerHandler.error("");
-            test.log(Status.FAIL, "");
+            LoggerHandler.error("Clicked on Next failed");
+            test.log(Status.FAIL, "Clicked on Next failed");
         }
     }
  

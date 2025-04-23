@@ -35,7 +35,7 @@ public class Assertion {
         String actualText = driver.findElement(locator).getText();
         Assert.assertEquals(actualText, expectedText);
     }
- 
+    
     public void verifyPartialText(String expectedText, By locator) {
         String actualText = driver.findElement(locator).getText();
         Assert.assertTrue(actualText.contains(expectedText));

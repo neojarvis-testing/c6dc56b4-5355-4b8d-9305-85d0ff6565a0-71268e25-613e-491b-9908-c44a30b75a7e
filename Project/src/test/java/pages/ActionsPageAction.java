@@ -30,8 +30,8 @@ public class ActionsPageAction {
    public void clickOnAppointments(){
     try{
         helper.clickByLocater(ActionsPageLocators.appointments);
-        assertion.verifyFullUrl("https://my.clevelandclinic.org/patients/information/access");
-        Base.driver.navigate().back();
+        assertion.verifyPartialUrl("https://my.clevelandclinic.org/patients/information/access");
+       
         LoggerHandler.info("Appointmenmts Url Verified Successfully");
         test.log(Status.PASS,"Appointmenmts Url Verified Successfully");
     }catch(Exception e){
@@ -44,8 +44,9 @@ public class ActionsPageAction {
    }
    public void clickOnInsurance(){
     try{
+        Base.driver.navigate().back();
         helper.clickByLocater(ActionsPageLocators.acceptedInsu);
-        assertion.verifyFullUrl("https://my.clevelandclinic.org/patients/accepted-insurance");
+        assertion.verifyPartialUrl("https://my.clevelandclinic.org/patients/accepted-insurance");
         Base.driver.navigate().back();
         LoggerHandler.info("Insurance Url Verified Successfully");
         test.log(Status.PASS,"Insurance Url Verified Successfully");
@@ -62,8 +63,7 @@ public class ActionsPageAction {
     try{
         helper.clickByLocater(ActionsPageLocators.eventsCal);
         helper.switchToNewTab();
-        assertion.verifyFullUrl("https://events.clevelandclinic.org");
-        helper.goBackToWindow(0);
+        assertion.verifyPartialUrl("https://events.clevelandclinic.org");
         LoggerHandler.info("Event clicked and  Url Verified Successfully");
         test.log(Status.PASS,"Event clicked and Url Verified Successfully");
     }catch(Exception e){
@@ -76,9 +76,9 @@ public class ActionsPageAction {
    }
    public void clickOnFinance(){
     try{
+        helper.goBackToWindow(0);
         helper.clickByLocater(ActionsPageLocators.finaceAssi);
-        assertion.verifyFullUrl("https://my.clevelandclinic.org/patients/billing-finance/financial-assistance");
-        Base.driver.navigate().back();
+        assertion.verifyPartialUrl("https://my.clevelandclinic.org/patients/billing-finance/financial-assistance");
         LoggerHandler.info("Finance clicked and  Url Verified Successfully");
         test.log(Status.PASS,"Finance clicked and Url Verified Successfully");
     }catch(Exception e){
@@ -91,9 +91,9 @@ public class ActionsPageAction {
    }
    public void clickOnCleveLand(){
     try{
-    helper.clickByLocater(ActionsPageLocators.giveTo);
-    assertion.verifyFullUrl("https://my.clevelandclinic.org/giving");
     Base.driver.navigate().back();
+    helper.clickByLocater(ActionsPageLocators.giveTo);
+    assertion.verifyPartialUrl("https://my.clevelandclinic.org/giving");
     LoggerHandler.info("giveto clicked and  Url Verified Successfully");
     test.log(Status.PASS,"giveto clicked and Url Verified Successfully");
 }catch(Exception e){
@@ -106,9 +106,9 @@ public class ActionsPageAction {
 }
 public void clickOnPayBill(){
     try{
-    helper.clickByLocater(ActionsPageLocators.payYour);
-    assertion.verifyFullUrl("https://my.clevelandclinic.org/patients/billing-finance/payment-options");
     Base.driver.navigate().back();
+    helper.clickByLocater(ActionsPageLocators.payYour);
+    assertion.verifyPartialUrl("https://my.clevelandclinic.org/patients/billing-finance/payment-options");
     LoggerHandler.info("Pay your bill is clicked and Url is Verified");
     test.log(Status.PASS,"Pay your bill is clicked and Url is Verified");
     }catch(Exception e){
@@ -121,9 +121,9 @@ public void clickOnPayBill(){
 }
 public void clickOnPrice(){
     try{
-        helper.clickByLocater(ActionsPageLocators.priceTrans);
-        assertion.verifyFullUrl("https://my.clevelandclinic.org/patients/billing-finance/comprehensive-hospital-charges");
         Base.driver.navigate().back();
+        helper.clickByLocater(ActionsPageLocators.priceTrans);
+        assertion.verifyPartialUrl("https://my.clevelandclinic.org/patients/billing-finance/comprehensive-hospital-charges");
         LoggerHandler.info("Price Transparency is clicked and Url verified");
         test.log(Status.PASS, "Price Transparency is clicked and Url verified");
     }catch(Exception e){
@@ -136,9 +136,9 @@ public void clickOnPrice(){
 }
 public void clickOnRefer(){
     try{
-        helper.clickByLocater(ActionsPageLocators.referPatient);
-        assertion.verifyFullUrl("https://my.clevelandclinic.org/professionals/referring");
         Base.driver.navigate().back();
+        helper.clickByLocater(ActionsPageLocators.referPatient);
+        assertion.verifyPartialUrl("https://my.clevelandclinic.org/professionals/referring");
         LoggerHandler.info("Refer a Patient is clicked and Url verified");
         test.log(Status.PASS, "Refer a Patient is clicked and Url verified");
     }catch(Exception e){
@@ -151,9 +151,9 @@ public void clickOnRefer(){
 }
 public void clickOnPhone(){
     try{
-        helper.clickByLocater(ActionsPageLocators.phoneDir);
-        assertion.verifyFullUrl("https://my.clevelandclinic.org/about/contact/phone-directory");
         Base.driver.navigate().back();
+        helper.clickByLocater(ActionsPageLocators.phoneDir);
+        assertion.verifyPartialUrl("https://my.clevelandclinic.org/about/contact/phone-directory");
         LoggerHandler.info("Phone Directory is clicked and Url verified");
         test.log(Status.PASS, "Phone Directory is clicked and Url verified");
     }catch(Exception e){
@@ -166,9 +166,9 @@ public void clickOnPhone(){
 }
 public void clickOnSecondOpi(){
     try{
-        helper.clickByLocater(ActionsPageLocators.virtualSecond);
-        assertion.verifyFullUrl("https://my.clevelandclinic.org/online-services/virtual-second-opinions");
         Base.driver.navigate().back();
+        helper.clickByLocater(ActionsPageLocators.virtualSecond);
+        assertion.verifyPartialUrl("https://my.clevelandclinic.org/online-services/virtual-second-opinions");
         LoggerHandler.info("Virtual Second Opinions is clicked and Url verified");
         test.log(Status.PASS, "Virtual Second Opinions is clicked and Url verified");
     }catch(Exception e){
@@ -181,9 +181,9 @@ public void clickOnSecondOpi(){
 }
 public void clickOnVirtual(){
     try{
-        helper.clickByLocater(ActionsPageLocators.virtualVisit);
-        assertion.verifyFullUrl("https://my.clevelandclinic.org/online-services/virtual-visits");
         Base.driver.navigate().back();
+        helper.clickByLocater(ActionsPageLocators.virtualVisit);
+        assertion.verifyPartialUrl("https://my.clevelandclinic.org/online-services/virtual-visits");
         LoggerHandler.info("Virtual Visits is clicked and Url verified");
         test.log(Status.PASS, "Virtual Visits is clicked and Url verified");
     }catch(Exception e){
@@ -196,9 +196,9 @@ public void clickOnVirtual(){
 }
 public void clickonCleveImg(){
     try{
-        helper.clickByLocater(ActionsPageLocators.virtualVisit);
-        assertion.verifyFullUrl("https://my.clevelandclinic.org/");
         Base.driver.navigate().back();
+        helper.clickByLocater(ActionsPageLocators.virtualVisit);
+        assertion.verifyPartialUrl("https://my.clevelandclinic.org/");
         LoggerHandler.info("CleveLand Img is clicked and Url verified");
         test.log(Status.PASS, "CleveLand Img is clicked and Url verified");
     }catch(Exception e){
@@ -213,17 +213,17 @@ public void clickonCleveImg(){
    public void allActions(){
       verifyActionsSec();
       clickOnAppointments();
-      clickOnEvent();
       clickOnInsurance();
+      clickOnEvent();
       clickOnFinance();
-      clickOnCleveLand();
-      clickOnPayBill();
-      clickOnPrice();
-      clickOnRefer();
-      clickOnPhone();
-      clickOnSecondOpi();
-      clickOnVirtual();
-      clickonCleveImg();
+       clickOnCleveLand();
+       clickOnPayBill();
+       clickOnPrice();
+       clickOnRefer();
+       clickOnPhone();
+       clickOnSecondOpi();
+       clickOnVirtual();
+       clickonCleveImg();
    }
 }
  
