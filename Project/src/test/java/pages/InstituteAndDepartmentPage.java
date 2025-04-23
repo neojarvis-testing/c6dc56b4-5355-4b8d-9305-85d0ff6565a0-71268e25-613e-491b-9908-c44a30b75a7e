@@ -18,11 +18,13 @@ public class InstituteAndDepartmentPage {
     WebDriver driver;
     public static WebDriverHelper helper;
     ExtentTest test;
+
  
-    public InstituteAndDepartmentPage(WebDriver driver, ExtentTest test) {
+    public InstituteAndDepartmentPage(WebDriver driver, ExtentTest test){
         this.driver = driver;
         helper = new WebDriverHelper(driver);
         this.test = test;
+
     }
  
     // Institute and Department
@@ -134,7 +136,6 @@ public class InstituteAndDepartmentPage {
             Base.driver.navigate().back();
             Base.driver.navigate().back();
             Base.driver.navigate().back();
-            // Base.driver.navigate().to("https://my.clevelandclinic.org/departments");
             helper.clickByLocater(InstituteAndDepartmentLocator.pharmacy);
             LoggerHandler.info("Clicked on Pharmacy");
             test.log(Status.PASS, "Clicked on Pharmacy");

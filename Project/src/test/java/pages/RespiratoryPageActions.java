@@ -13,6 +13,7 @@ import utils.WebDriverHelper;
 public class RespiratoryPageActions {
     public static WebDriverHelper helper; 
     public static ExtentTest test;
+    
     public RespiratoryPageActions(ExtentTest test) {
         helper=new WebDriverHelper(Base.driver);
         this.test=test;

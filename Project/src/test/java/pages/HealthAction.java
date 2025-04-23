@@ -6,6 +6,7 @@ import com.aventstack.extentreports.Status;
 import uistore.HealthPageLocators;
 import utils.Base;
 import utils.LoggerHandler;
+import utils.Reporter;
 import utils.WebDriverHelper;
  
 public class HealthAction {
@@ -23,6 +24,7 @@ public class HealthAction {
         }catch(Exception e){
             LoggerHandler.error("Clicked on Health Library failed");
             test.log(Status.FAIL,"Clicked on Health Library failed");
+             Reporter.addScreenshotToReport("HealthLibrary", test,"HealthLibrary Screenshot",Base.driver);
         }
     }
     public void clickOnBody(){
@@ -34,6 +36,7 @@ public class HealthAction {
         }catch(Exception e){
             LoggerHandler.error("Clicked on BodyOrgans failed");
             test.log(Status.FAIL,"Clicked on BodyOrgans failed");
+            Reporter.addScreenshotToReport("Body", test,"Body Screenshot",Base.driver);
         }
     }
  
@@ -47,6 +50,7 @@ public class HealthAction {
         }catch(Exception e){
             LoggerHandler.error("Eyes action failed");
             test.log(Status.FAIL,"Eyes action failed");
+            Reporter.addScreenshotToReport("Eyes", test,"Eyes Screenshot",Base.driver);
         }
     }
     public void clickOnEye(){
@@ -57,6 +61,7 @@ public class HealthAction {
         }catch(Exception e){
             LoggerHandler.error("Clicked on Eye failed");
             test.log(Status.FAIL,"Clicked on Eye failed");
+            Reporter.addScreenshotToReport("Eye", test,"Eye Screenshot",Base.driver);
         }
     }
     public void clickOnRedEye(){
@@ -69,6 +74,7 @@ public class HealthAction {
         }catch(Exception e){
             LoggerHandler.error("Clicked on RedEye failed");
             test.log(Status.FAIL,"Clicked on RedEye failed");
+            Reporter.addScreenshotToReport("RedEye", test,"RedEye Screenshot",Base.driver);
         }
     }
  

@@ -1,7 +1,5 @@
 package pages;
  
-import java.time.Duration;
- 
 import org.openqa.selenium.WebDriver;
  
 import com.aventstack.extentreports.ExtentTest;
@@ -23,7 +21,6 @@ public class FindDoctorPageActions {
         this.driver = driver;
         this.test = test;
         helper = new WebDriverHelper(driver);
-        asserr = new Assertion(driver);
     }
  
     public void clickFindDoctor(){

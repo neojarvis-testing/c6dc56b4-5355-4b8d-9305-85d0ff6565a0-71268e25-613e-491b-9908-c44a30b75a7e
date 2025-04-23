@@ -10,8 +10,4 @@ public class HealthPageLocators {
     public static By redEye= By.xpath("//a[text()='Red eye']");
     public static By allergies= By.xpath("//a[text()='Allergies']");
     public static By blephartis= By.xpath("//a[text()='Blepharitis']");
-    public static By Pinkeye= By.xpath("//a[text()='Pink eye (conjunctivitis)']");
-    public static By dryEye= By.xpath("//a[text()='Dry eye']");
-    public static By eyeInjury= By.xpath("Dry eye");
-    public static By glaucoma= By.xpath("Glaucoma");
 }

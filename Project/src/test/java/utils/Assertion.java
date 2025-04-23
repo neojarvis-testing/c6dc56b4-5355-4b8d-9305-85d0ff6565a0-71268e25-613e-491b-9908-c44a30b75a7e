@@ -11,22 +11,17 @@ public class Assertion {
         this.driver = driver;
     }
  
-    public void verifyFullTitle(String expectedTitle) {
+    public void verifyFullPageTitle(String expectedTitle) {
         String actualTitle = driver.getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);
     }
  
-    public void verifyPartialTitle(String expectedTitle) {
+    public void verifyPartialPageTitle(String expectedTitle) {
         String actualTitle = driver.getTitle();
         Assert.assertTrue(actualTitle.contains(expectedTitle));
     }
  
-    public void verifyFullUrl(String expectedUrl) {
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl);
-    }
- 
-    public void verifyPartialUrl(String expectedUrl) {
+    public void verifyPageUrl(String expectedUrl) {
         String actualUrl = driver.getCurrentUrl();
         Assert.assertTrue(actualUrl.contains(expectedUrl));
     }

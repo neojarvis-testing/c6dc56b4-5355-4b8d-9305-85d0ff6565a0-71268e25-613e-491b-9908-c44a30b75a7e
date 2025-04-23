@@ -12,9 +12,10 @@ import utils.WebDriverHelper;
 public class OhioPageActions {
     public static WebDriverHelper helper; 
     public static ExtentTest test;
+
     public OhioPageActions(ExtentTest test) {
         this.test=test;
-        helper=new WebDriverHelper(Base.driver);
+
     }
     public void clickOnGetDirection(){
         try {

@@ -30,10 +30,6 @@ public class ScheduleNowPageActions {
             helper.clickByLocater(ScheduleNowPageLocators.scheduleNow);
             LoggerHandler.info("Clicked Schedule Now");
             test.log(Status.PASS, "Clicked Schedule Now");
- 
-           // asserr.verifyFullTitle(retriveData(0, 0));
-            LoggerHandler.info("Verified Title");
-            test.log(Status.PASS, "Verified Title");
         }
         catch(Exception e){
             LoggerHandler.error("");
@@ -45,7 +41,6 @@ public class ScheduleNowPageActions {
         try{
             helper.waitForElementToBeVisible(ScheduleNowPageLocators.requestAppointment,6);
             helper.clickByLocater(ScheduleNowPageLocators.requestAppointment);
-            //asserr.verifyFullTitle(retriveData(1, 0));
             LoggerHandler.info("Clicked on Request an Appointment");
             test.log(Status.PASS, "Clicked on Request an Appointment");
         }
@@ -59,7 +54,6 @@ public class ScheduleNowPageActions {
         try{
             helper.waitForElementToBeVisible(ScheduleNowPageLocators.heading1, 6);
             helper.clickByLocater(ScheduleNowPageLocators.getStarted);
-            //asserr.verifyFullText(retriveData(2, 0),ScheduleNowPageLocators.heading1);
             LoggerHandler.info("Clicked on Get Started");
             test.log(Status.PASS, "Clicked on Get Started");
         }
@@ -73,7 +67,6 @@ public class ScheduleNowPageActions {
         try{
             helper.waitForElementToBeVisible(ScheduleNowPageLocators.meButton, 4);
             helper.clickByLocater(ScheduleNowPageLocators.meButton);
-            //asserr.verifyFullText(retriveData(3, 0), ScheduleNowPageLocators.heading2);
             LoggerHandler.info("Clicked on Me");
             test.log(Status.PASS, "Clicked on Me");
         }
@@ -87,7 +80,6 @@ public class ScheduleNowPageActions {
         try{
             helper.waitForElementToBeVisible(ScheduleNowPageLocators.notSureButton,6);
             helper.clickByLocater(ScheduleNowPageLocators.notSureButton);
-            //asserr.verifyFullText(retriveData(4, 0), ScheduleNowPageLocators.heading3);
             LoggerHandler.info("Clicked on NotSure");
             test.log(Status.PASS, "Clicked on NotSure");
         }
