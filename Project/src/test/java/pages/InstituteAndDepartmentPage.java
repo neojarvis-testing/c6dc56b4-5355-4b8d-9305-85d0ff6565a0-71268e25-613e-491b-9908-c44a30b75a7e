@@ -332,7 +332,6 @@ public class InstituteAndDepartmentPage {
      */
     public void clickOnNeedHelp() {
         try {
-            helper.waitForElementToBeVisible(InstituteAndDepartmentLocator.needHelp, 10);
             helper.waitForElementToBeClickable(InstituteAndDepartmentLocator.needHelp, 10);
             helper.clickByLocater(InstituteAndDepartmentLocator.needHelp);
             LoggerHandler.info("Clicked on Need Help");

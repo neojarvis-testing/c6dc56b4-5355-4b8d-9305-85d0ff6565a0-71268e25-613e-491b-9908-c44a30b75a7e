@@ -98,12 +98,6 @@ public class HealthLibraryPageActions {
             LoggerHandler.error("Clicked on BackHealth Failed ");
             test.log(Status.FAIL,"Clicked on BackHealth Failed");
             Reporter.addScreenshotToReport("Diagnostics failed", test, "Diagnostics failed", null);
-            LoggerHandler.info("Clicked on Diagnostics");
-            test.log(Status.PASS,"Clicked on Diagnostics");
- 
-        }catch(Exception e){
-            LoggerHandler.error("Clicked on Diagnostics failed");
-            test.log(Status.FAIL,"Clicked on Diseases failed");
         }
     }
  
@@ -131,12 +125,6 @@ public class HealthLibraryPageActions {
             LoggerHandler.error("Clicked on BackHealth Failed ");
             test.log(Status.FAIL,"Clicked on BackHealth Failed");
             Reporter.addScreenshotToReport("Treatments failed", test, "Treatments failed", null);
-            LoggerHandler.info("Clicked on Treatments");
-            test.log(Status.PASS,"Clicked on Treatments");
-           
-        }catch(Exception e){
-            LoggerHandler.error("Clicked on Treatments failed");
-            test.log(Status.FAIL,"Clicked on Treatments failed");
         }
     }
  
@@ -189,12 +177,6 @@ public class HealthLibraryPageActions {
             LoggerHandler.error("Clicked on DrugsDevices Failed ");
             test.log(Status.FAIL,"Clicked on DrugsDevices Failed");
             Reporter.addScreenshotToReport("DrugsDevices failed", test, "DrugsDevices failed", null);
-            LoggerHandler.info("Clicked on Drugs");
-            test.log(Status.PASS,"Clicked on Drugs");
- 
-        }catch(Exception e){
-            LoggerHandler.error("Clicked on Drugs failed");
-            test.log(Status.FAIL,"Clicked on Drugsfailed");
         }
     }
      /*

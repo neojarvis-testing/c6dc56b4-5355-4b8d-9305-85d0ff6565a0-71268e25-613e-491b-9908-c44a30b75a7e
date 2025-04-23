@@ -1,5 +1,5 @@
 package pages;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import uistore.HomePageLocators;
@@ -10,30 +10,30 @@ import utils.LoggerHandler;
 import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
-/* 
+/*
     * a. Class name : OhioPageActions
     * b. Author : Dharen
     * c. Description : This class provides methods to interact with elements related to the Get Directions section.
 */
 public class OhioPageActions {
-    public static WebDriverHelper helper; 
+    public static WebDriverHelper helper;
     public static ExtentTest test;
-    /* 
+    /*
         * a. Constructor name : OhioPageActions
         * b. Author : Dharen
         * c. Description : Initializes the WebDriverHelper instance with the current driver and associates the ExtentTest instance for reporting.
-        * d. Parameter list : 
+        * d. Parameter list :
         *    - ExtentTest test: Instance of ExtentTest to log actions and results in the test report.
     */
     public OhioPageActions(ExtentTest test) {
         this.test=test;
         helper=new WebDriverHelper(Base.driver);
     }
-     /* 
+     /*
     * a. Method name : clickOnGetDirection
     * b. Author : Dharen
     * c. Description : This method is used for clicking on "Get directions" button.
-    * d. Return type : void 
+    * d. Return type : void
     * e. Parameter list : none
     */
     public void clickOnGetDirection(){
@@ -53,11 +53,11 @@ public class OhioPageActions {
             Reporter.addScreenshotToReport(null, test, null, Base.driver);
         }
     }
-     /* 
+     /*
     * a. Method name : clickOnSearchBar
     * b. Author : Dharen
     * c. Description : This method is used for clicking on "Search bar" in find a location page.
-    * d. Return type : void 
+    * d. Return type : void
     * e. Parameter list : none
     */
     public void clickOnSearchBar() {
@@ -72,27 +72,18 @@ public class OhioPageActions {
             test.log(Status.FAIL,"Failed to click on search bar");
             Screenshot.captureScreenshot("Failed to click on search bar");
             Reporter.addScreenshotToReport(null, test, null, Base.driver);
-        try{
-            helper.waitForElementToBeVisible(OhioPageLocators.searchbox, 4);
-            helper.clickByLocater(OhioPageLocators.searchbox);
-            LoggerHandler.info("Clicked on Search Bar");
-            test.log(Status.PASS,"Clicked on Search Bar");
-        }catch(Exception e){
-            LoggerHandler.info("Failed to click on Search Bar");
-            test.log(Status.FAIL,"Failed to click on Search Bar");
         }
     }
-    /* 
+    /*
     * a. Method name : enterOhio
     * b. Author : Dharen
     * c. Description : This method is used enter "Ohio" in search bar.
-    * d. Return type : void 
+    * d. Return type : void
     * e. Parameter list : none
     */
     public void enterOhio() {
         try {
             test.log(Status.INFO,"enter Ohio");
-        try{
             helper.waitForElementToBeVisible(OhioPageLocators.searchbox,4);
             helper.sendData(OhioPageLocators.searchbox,"Ohio");
             LoggerHandler.info("Entered Ohio");
@@ -102,16 +93,13 @@ public class OhioPageActions {
             test.log(Status.FAIL,"Failed to enter Ohio");
             Screenshot.captureScreenshot("Failed to enter Ohio");
             Reporter.addScreenshotToReport(null, test, null, Base.driver);
-        }catch(Exception e){
-            LoggerHandler.info("Failed to Enter Ohio");
-            test.log(Status.FAIL,"Failed to Enter Ohio");
         }
     }
-    /* 
+    /*
     * a. Method name : locationtype
     * b. Author : Dharen
     * c. Description : This method is to click on "location type" in find a location page.
-    * d. Return type : void 
+    * d. Return type : void
     * e. Parameter list : none
     */
     public void locationtype() {
@@ -126,21 +114,13 @@ public class OhioPageActions {
             test.log(Status.FAIL,"Failed to click on Location type");
             Screenshot.captureScreenshot("Failed to click on Location type");
             Reporter.addScreenshotToReport(null, test, null, Base.driver);
-        try{
-            helper.waitForElementToBeVisible((OhioPageLocators.locationtype), 6);
-            helper.clickByLocater(OhioPageLocators.locationtype);
-            LoggerHandler.info("Clicked on Location Type");
-            test.log(Status.PASS,"Clicked on Location Type");
-        }catch(Exception e){
-            LoggerHandler.info("Failed to click on Location Type");
-            test.log(Status.FAIL,"Failed to click on Location Type");
         }
     }
-    /* 
+    /*
     * a. Method name : selecthealthcenters
     * b. Author : Dharen
     * c. Description : This method is used to select "healthcenters".
-    * d. Return type : void 
+    * d. Return type : void
     * e. Parameter list : none
     */
     public void selecthealthcenters() {
@@ -155,21 +135,13 @@ public class OhioPageActions {
             test.log(Status.FAIL,"Failed to select health centers");
             Screenshot.captureScreenshot("Failed to select health centers");
             Reporter.addScreenshotToReport(null, test, null, Base.driver);
-        try{
-            helper.hoverByLocater(OhioPageLocators.healthcenters);
-            helper.clickByLocater(OhioPageLocators.healthcenters);
-            LoggerHandler.info("Clicked on Health Centers");
-            test.log(Status.PASS,"Clicked on Health Centers");
-        }catch(Exception e){
-            LoggerHandler.info("Failed to click on Health Centers");
-            test.log(Status.FAIL,"Failed to click on Health Centers");
         }
     }
-    /* 
+    /*
     * a. Method name : selectimagingradiology
     * b. Author : Dharen
     * c. Description : This method is used for selecting "imagingradiology".
-    * d. Return type : void 
+    * d. Return type : void
     * e. Parameter list : none
     */
     public void selectimagingradiology() {
@@ -186,26 +158,14 @@ public class OhioPageActions {
             test.log(Status.FAIL,"Failed to select to Imaging Radiology");
             Screenshot.captureScreenshot("Failed to select Imaging radiology");
             Reporter.addScreenshotToReport(null, test, null, Base.driver);
-        try{
-            helper.waitForElementToBeVisible(OhioPageLocators.imagingradiology, 6);
-            helper.hoverByLocater(OhioPageLocators.imagingradiology);
-            helper.hoverByLocater(OhioPageLocators.imagingradiology);
-            helper.clickByLocater(OhioPageLocators.imagingradiology);
-            LoggerHandler.info("Clicked on ImageRadiology");
-            test.log(Status.PASS,"Clicked on ImageRadiology");
-        }catch(Exception e){
-            LoggerHandler.info("Failed to click on ImageRadiology");
-            test.log(Status.FAIL,"Failed to click on ImageRadiology");
+ 
         }
     }
-
-        }
-    }
-     /* 
+     /*
     * a. Method name : ohiotest
     * b. Author : Dharen
     * c. Description : It is concrete method.
-    * d. Return type : void 
+    * d. Return type : void
     * e. Parameter list : none
     */
     public void ohiotest() {
