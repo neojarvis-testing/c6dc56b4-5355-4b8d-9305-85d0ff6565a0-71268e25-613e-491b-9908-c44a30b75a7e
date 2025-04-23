@@ -2,6 +2,16 @@ package pages;
  
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+ 
+import uistore.HealthPageLocators;
+import utils.Base;
+import utils.LoggerHandler;
+import utils.Reporter;
+
+import uistore.HealthPageLocators;
+import utils.Base;
+import utils.LoggerHandler;
+import utils.Reporter;
 
 import uistore.HealthPageLocators;
 import utils.Base;
@@ -19,7 +29,7 @@ public class HealthAction {
  * WebDriverHelper instance and linking the ExtentTest instance for
  * reporting purposes.
  * Return Type: Constructor
- * Parameter List: 
+ * Parameter List:
  *   - ExtentTest test: Instance of ExtentTest for logging and reporting.
  */
 
@@ -30,7 +40,7 @@ public class HealthAction {
     /*
  * Method Name: clickOnHealthLibrary
  * Author Name: Hrushikesh
- * Description: Performs a click operation on the Health Library element 
+ * Description: Performs a click operation on the Health Library element
  * to navigate to the health-related content section.
  * Return Type: void
  * Parameter List: None
@@ -50,7 +60,7 @@ public class HealthAction {
     /*
  * Method Name: clickOnBody
  * Author Name: Hrushikesh
- * Description: Scrolls to the Body Organs element and clicks to navigate 
+ * Description: Scrolls to the Body Organs element and clicks to navigate
  * to the Body Organs section.
  * Return Type: void
  * Parameter List: None
@@ -71,7 +81,7 @@ public class HealthAction {
  /*
  * Method Name: enterEyes
  * Author Name: Hrushikesh
- * Description: Performs actions in the search bar by entering the term 
+ * Description: Performs actions in the search bar by entering the term
  * "Eyes" and executing an enter key action.
  * Return Type: void
  * Parameter List: None
@@ -93,7 +103,7 @@ public class HealthAction {
     /*
  * Method Name: clickOnEye
  * Author Name: Hrushikesh
- * Description: Clicks on the Eye element to navigate to detailed 
+ * Description: Clicks on the Eye element to navigate to detailed
  * information about the Eye section.
  * Return Type: void
  * Parameter List: None
@@ -113,7 +123,7 @@ public class HealthAction {
     /*
  * Method Name: clickOnRedEye
  * Author Name: Hrushikesh
- * Description: Scrolls to the Red Eye element, clicks to navigate, and 
+ * Description: Scrolls to the Red Eye element, clicks to navigate, and
  * switches to a new browser tab for additional content.
  * Return Type: void
  * Parameter List: None
@@ -135,8 +145,8 @@ public class HealthAction {
     /*
  * Method Name: allHealth
  * Author Name: Hrushikesh
- * Description: Executes all health-related methods in a sequence, including 
- * clicking on Health Library, navigating to Body Organs, performing an Eyes 
+ * Description: Executes all health-related methods in a sequence, including
+ * clicking on Health Library, navigating to Body Organs, performing an Eyes
  * search, and clicking on Eye and Red Eye sections.
  * Return Type: void
  * Parameter List: None
