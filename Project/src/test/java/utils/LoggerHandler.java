@@ -20,6 +20,7 @@ public class LoggerHandler {
     public static void trace(String message) {
         logger.trace(message);
     }
+    // trace t1 = new trace();
  
     public static void debug(String message) {
         logger.debug(message);
