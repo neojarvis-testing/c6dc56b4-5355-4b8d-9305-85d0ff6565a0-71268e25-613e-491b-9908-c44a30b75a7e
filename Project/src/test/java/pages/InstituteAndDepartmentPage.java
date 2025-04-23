@@ -1,11 +1,11 @@
 package pages;
- 
+
 import org.openqa.selenium.WebDriver;
- 
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
- 
+
 import uistore.InstituteAndDepartmentLocator;
 import utils.Assertion;
 import utils.Base;
@@ -35,7 +35,7 @@ public class InstituteAndDepartmentPage {
         this.test = test;
 
     }
- 
+
     // Institute and Department
  
     /*
@@ -59,7 +59,7 @@ public class InstituteAndDepartmentPage {
             Reporter.addScreenshotToReport("Clicked on Institute and Department failed", test, "Clicked on Institute and Department failed", driver);
         }
     }
- 
+
     // Blood Management
  
     /*
@@ -80,7 +80,7 @@ public class InstituteAndDepartmentPage {
             LoggerHandler.info("Clicked on Blood Management");
             test.log(Status.INFO, "Clicked on Blood Management");
             test.log(Status.PASS, "Clicked on Blood Management");
- 
+
         } catch (Exception e) {
             LoggerHandler.error("Clicked on Blood Management failed");
             test.log(Status.FAIL, "Clicked on Blood Management failed");
@@ -159,7 +159,7 @@ public class InstituteAndDepartmentPage {
      * Params List: NA
      */
     public void clickOnRefusingABloodTransfusion() {
- 
+
         try {
             helper.clickByLocater(InstituteAndDepartmentLocator.refusingABloodTransfusion);
             LoggerHandler.info("Clicked on Refusing A Blood Transfusion");
@@ -212,7 +212,7 @@ public class InstituteAndDepartmentPage {
             test.log(Status.FAIL, "Clicked on contacts failed");
             Reporter.addScreenshotToReport("Clicked on contacts failed", test, "Clicked on contacts failed", driver);
         }
- 
+
     }
     // Pharmacy
  
@@ -224,7 +224,7 @@ public class InstituteAndDepartmentPage {
      * Params List: NA
      */
     public void clickOnPharmacy() {
- 
+
         try {
             Base.driver.navigate().back();
             Base.driver.navigate().back();
@@ -242,7 +242,7 @@ public class InstituteAndDepartmentPage {
             Reporter.addScreenshotToReport("Clicked on Pharmacy failed", test, "Clicked on Pharmacy failed", driver);
  
         }
- 
+
     }
  
     /*
@@ -253,7 +253,7 @@ public class InstituteAndDepartmentPage {
      * Params List: NA
      */
     public void switchTabToTakeTheSurvey() {
- 
+
         try {
             helper.scrollByPixel(0, 5000);
             helper.clickByLocater(InstituteAndDepartmentLocator.takeTheSurvey);
@@ -273,9 +273,9 @@ public class InstituteAndDepartmentPage {
             test.log(Status.FAIL, "Switched tab to take the survey failed");
             Reporter.addScreenshotToReport("Switched tab to take the survey failed", test, "Switched tab to take the survey failed", driver);
         }
- 
+
     }
- 
+
     // Contact Us
  
     /*
@@ -319,9 +319,9 @@ public class InstituteAndDepartmentPage {
             test.log(Status.FAIL, "Clicked on Contact Cleveland Clinic failed");
             Reporter.addScreenshotToReport("Clicked on Contact Cleveland Clinic failed", test, "Clicked on Contact Cleveland Clinic failed", driver);
         }
- 
+
     }
- 
+
     // Need Help
  
     /*
@@ -505,5 +505,5 @@ public class InstituteAndDepartmentPage {
         clickOnVirtualSecondOpinion();
         clickOnGetStarted();
     }
- 
+
 }
