@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
  
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
- 
 import uistore.FindDoctorPageLocators;
 import utils.Assertion;
 import utils.ExcelReader;
@@ -59,6 +58,10 @@ public class FindDoctorPageActions {
             LoggerHandler.error("Clicked on Find Doctor failed");
             test.log(Status.FAIL,"Clicked on Find Doctor failed");
             Reporter.addScreenshotToReport("Clicked on Find Doctor failed", test, null, driver);
+            test.log(Status.PASS,"Clicked on Find Doctor");
+        }catch(Exception e){
+            LoggerHandler.error("Clicked on Find Doctor failed");
+            test.log(Status.FAIL,"Clicked on Find Doctor failed");
         }
     }
  
@@ -82,6 +85,10 @@ public class FindDoctorPageActions {
             LoggerHandler.error("Entered input Heart failed");
             test.log(Status.FAIL,"Entered input Heart failed");
             Reporter.addScreenshotToReport("Entered input Heart failed", test, null, driver);
+            test.log(Status.PASS,"Entered input Heart");
+        }catch(Exception e){
+            LoggerHandler.error("Entered input Heart failed");
+            test.log(Status.FAIL,"Entered input Heart failed");
         }
     }
  
@@ -118,6 +125,14 @@ public class FindDoctorPageActions {
             LoggerHandler.error("Clicked Location failed");
             test.log(Status.FAIL,"Clicked Location failed");
             Reporter.addScreenshotToReport("Clicked Location failed", test, null, driver);
+            helper.waitForElementToBeVisible(FindDoctorPageLocators.loc, 10);
+            helper.hoverByLocater(FindDoctorPageLocators.loc);
+            helper.clickByLocater(FindDoctorPageLocators.loc);
+            LoggerHandler.info("Entered Location");
+            test.log(Status.PASS,"Entered Location");
+        }catch(Exception e){
+            LoggerHandler.error("Entered Location failed");
+            test.log(Status.FAIL,"Entered Location failed");
         }
     }
  
@@ -148,11 +163,18 @@ public class FindDoctorPageActions {
         catch(Exception e ){
             LoggerHandler.error("Entered Department failed");
             test.log(Status.FAIL,"Entered Department failed");
-            Reporter.addScreenshotToReport("Entered Department failed", test, null, driver);
- 
+            Reporter.addScreenshotToReport("Entered Department failed", test, null, driver); 
             LoggerHandler.error("Clicked Department failed");
             test.log(Status.FAIL,"Clicked Department failed");
             Reporter.addScreenshotToReport("Clicked Department failed", test, null, driver);
+            helper.waitForElementToBeVisible(FindDoctorPageLocators.dept, 10);
+            helper.hoverByLocater(FindDoctorPageLocators.dept);
+            helper.clickByLocater(FindDoctorPageLocators.dept);
+            LoggerHandler.info("Entered Department");
+            test.log(Status.PASS,"Entered Department");
+        }catch(Exception e ){
+            LoggerHandler.error("Entered Department failed");
+            test.log(Status.FAIL,"Entered Department failed");
         }
     }
  
@@ -178,6 +200,12 @@ public class FindDoctorPageActions {
             LoggerHandler.error("Entered Language failed");
             test.log(Status.FAIL,"Entered Language failed");
             Reporter.addScreenshotToReport("Entered Language failed", test, null, driver);
+            helper.enterAction(FindDoctorPageLocators.location);
+            LoggerHandler.info("Entered Language");
+            test.log(Status.PASS,"Entered Language");
+        }catch(Exception e){
+            LoggerHandler.error("Entered Language failed");
+            test.log(Status.FAIL,"Entered Language failed");
         }
     }
  

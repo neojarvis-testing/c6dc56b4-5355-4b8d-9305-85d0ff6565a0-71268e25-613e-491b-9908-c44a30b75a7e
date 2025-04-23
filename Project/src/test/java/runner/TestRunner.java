@@ -1,5 +1,4 @@
 package runner;
-
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -7,7 +6,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-
 import pages.ActionsPageAction;
 import pages.FindDoctorPageActions;
 import pages.FooterIconPageActions;
@@ -75,13 +73,13 @@ public class TestRunner extends Base {
         fda.testFindDoctor();
     }
     @Test
-    public void FooterTestCase(){
+    public void footerTestCase(){
         test = reports.createTest("Institute And Department Test");
         InstituteAndDepartmentPage institute = new InstituteAndDepartmentPage(driver,test);
         institute.mergeInstituteAndDepartment();
     }
     @Test
-    public void FooterIconTestCase(){
+    public void footerIconTestCase(){
         ExtentTest test = reports.createTest("TestCase07");
         FooterIconPageActions footer = new FooterIconPageActions(test);
         footer.footerTestCase();

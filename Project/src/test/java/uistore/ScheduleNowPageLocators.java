@@ -1,7 +1,7 @@
 package uistore;
-
+ 
 import org.openqa.selenium.By;
-
+ 
 public class ScheduleNowPageLocators {
     public static By scheduleNow = By.xpath("//a[text()='Schedule now']");
     public static By requestAppointment = By.xpath("(//a[@href='/webappointment'])[1]");

@@ -55,6 +55,7 @@ public class ScheduleNowPageActions {
             test.log(Status.PASS, "Clicked Schedule Now");
  
             asserr.verifyFullPageTitle(retriveData(0, 0));
+           // asserr.verifyFullTitle(retriveData(0, 0));
             LoggerHandler.info("Verified Title");
             test.log(Status.INFO,"Verified Title");
             test.log(Status.PASS, "Verified Title");
@@ -85,6 +86,9 @@ public class ScheduleNowPageActions {
             LoggerHandler.info("Verified Title");
             test.log(Status.INFO,"Verified Title");
             test.log(Status.PASS, "Verified Title");
+            //asserr.verifyFullTitle(retriveData(1, 0));
+            LoggerHandler.info("Clicked on Request an Appointment");
+            test.log(Status.PASS, "Clicked on Request an Appointment");
         }
         catch(Exception e){
             LoggerHandler.error("Clicked on Request an Appointment failed");
@@ -117,6 +121,9 @@ public class ScheduleNowPageActions {
             LoggerHandler.info("Verified Text");
             test.log(Status.INFO,"Verified Text");
             test.log(Status.PASS, "Verified Text");
+            //asserr.verifyFullText(retriveData(2, 0),ScheduleNowPageLocators.heading1);
+            LoggerHandler.info("Clicked on Get Started");
+            test.log(Status.PASS, "Clicked on Get Started");
         }
         catch(Exception e){
             LoggerHandler.error("Clicked on Get Started failed");
@@ -148,6 +155,9 @@ public class ScheduleNowPageActions {
             LoggerHandler.info("Verified Text");
             test.log(Status.INFO,"Verified Text");
             test.log(Status.PASS, "Verified Text");
+            //asserr.verifyFullText(retriveData(3, 0), ScheduleNowPageLocators.heading2);
+            LoggerHandler.info("Clicked on Me");
+            test.log(Status.PASS, "Clicked on Me");
         }
         catch(Exception e){
             LoggerHandler.error("Clicked on Me failed");
@@ -180,6 +190,9 @@ public class ScheduleNowPageActions {
             LoggerHandler.info("Verified Text");
             test.log(Status.INFO,"Verified Text");
             test.log(Status.PASS, "Verified Text");
+            //asserr.verifyFullText(retriveData(4, 0), ScheduleNowPageLocators.heading3);
+            LoggerHandler.info("Clicked on NotSure");
+            test.log(Status.PASS, "Clicked on NotSure");
         }
         catch(Exception e){
             LoggerHandler.error("Clicked on NotSure failed");
@@ -328,6 +341,12 @@ public class ScheduleNowPageActions {
             LoggerHandler.error("Entered Address failed");
             test.log(Status.FAIL, "Entered Address failed");
             Reporter.addScreenshotToReport("Entered Address failed", test, null, driver);
+            LoggerHandler.info("Entered Address");
+            test.log(Status.PASS, "Entered Address");
+        }
+        catch(Exception e){
+            LoggerHandler.error("Entered Address failed");
+            test.log(Status.FAIL, "Entered Address failed");
         }
     }
  
@@ -470,6 +489,11 @@ public class ScheduleNowPageActions {
             LoggerHandler.error("Entered Reason failed");
             test.log(Status.FAIL, "Entered Reason failed");
             Reporter.addScreenshotToReport("Entered Reason failed", test, null, driver);
+            test.log(Status.PASS, "Entered Reason");
+        }
+        catch(Exception e){
+            LoggerHandler.error("Entered Reason failed");
+            test.log(Status.FAIL, "Entered Reason failed");
         }
     }
  
@@ -491,6 +515,8 @@ public class ScheduleNowPageActions {
             LoggerHandler.info("Captured Screenshot");
             test.log(Status.INFO,"Captured Screenshot");
             test.log(Status.PASS, "Captured Screenshot");
+            LoggerHandler.info("Verified Heading");
+            test.log(Status.PASS, "Verified Heading");
         }
         catch(Exception e){
             LoggerHandler.error("Verified Heading failed");

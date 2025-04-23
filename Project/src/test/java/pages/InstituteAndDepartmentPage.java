@@ -258,6 +258,8 @@ public class InstituteAndDepartmentPage {
             helper.clickByLocater(InstituteAndDepartmentLocator.takeTheSurvey);
             helper.switchToNewTab();
             helper.goBackToWindow(0);
+            LoggerHandler.info("verify forms");
+            test.log(Status.PASS,"verify forms");
             LoggerHandler.info("Switched tab to take the survey");
             test.log(Status.INFO, "Switched tab to take the survey");
             test.log(Status.PASS, "Switched tab to take the survey");

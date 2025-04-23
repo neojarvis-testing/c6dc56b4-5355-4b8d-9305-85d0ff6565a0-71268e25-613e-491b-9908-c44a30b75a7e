@@ -72,6 +72,14 @@ public class OhioPageActions {
             test.log(Status.FAIL,"Failed to click on search bar");
             Screenshot.captureScreenshot("Failed to click on search bar");
             Reporter.addScreenshotToReport(null, test, null, Base.driver);
+        try{
+            helper.waitForElementToBeVisible(OhioPageLocators.searchbox, 4);
+            helper.clickByLocater(OhioPageLocators.searchbox);
+            LoggerHandler.info("Clicked on Search Bar");
+            test.log(Status.PASS,"Clicked on Search Bar");
+        }catch(Exception e){
+            LoggerHandler.info("Failed to click on Search Bar");
+            test.log(Status.FAIL,"Failed to click on Search Bar");
         }
     }
     /* 
@@ -84,6 +92,7 @@ public class OhioPageActions {
     public void enterOhio() {
         try {
             test.log(Status.INFO,"enter Ohio");
+        try{
             helper.waitForElementToBeVisible(OhioPageLocators.searchbox,4);
             helper.sendData(OhioPageLocators.searchbox,"Ohio");
             LoggerHandler.info("Entered Ohio");
@@ -93,6 +102,9 @@ public class OhioPageActions {
             test.log(Status.FAIL,"Failed to enter Ohio");
             Screenshot.captureScreenshot("Failed to enter Ohio");
             Reporter.addScreenshotToReport(null, test, null, Base.driver);
+        }catch(Exception e){
+            LoggerHandler.info("Failed to Enter Ohio");
+            test.log(Status.FAIL,"Failed to Enter Ohio");
         }
     }
     /* 
@@ -114,6 +126,14 @@ public class OhioPageActions {
             test.log(Status.FAIL,"Failed to click on Location type");
             Screenshot.captureScreenshot("Failed to click on Location type");
             Reporter.addScreenshotToReport(null, test, null, Base.driver);
+        try{
+            helper.waitForElementToBeVisible((OhioPageLocators.locationtype), 6);
+            helper.clickByLocater(OhioPageLocators.locationtype);
+            LoggerHandler.info("Clicked on Location Type");
+            test.log(Status.PASS,"Clicked on Location Type");
+        }catch(Exception e){
+            LoggerHandler.info("Failed to click on Location Type");
+            test.log(Status.FAIL,"Failed to click on Location Type");
         }
     }
     /* 
@@ -135,6 +155,14 @@ public class OhioPageActions {
             test.log(Status.FAIL,"Failed to select health centers");
             Screenshot.captureScreenshot("Failed to select health centers");
             Reporter.addScreenshotToReport(null, test, null, Base.driver);
+        try{
+            helper.hoverByLocater(OhioPageLocators.healthcenters);
+            helper.clickByLocater(OhioPageLocators.healthcenters);
+            LoggerHandler.info("Clicked on Health Centers");
+            test.log(Status.PASS,"Clicked on Health Centers");
+        }catch(Exception e){
+            LoggerHandler.info("Failed to click on Health Centers");
+            test.log(Status.FAIL,"Failed to click on Health Centers");
         }
     }
     /* 
@@ -158,6 +186,18 @@ public class OhioPageActions {
             test.log(Status.FAIL,"Failed to select to Imaging Radiology");
             Screenshot.captureScreenshot("Failed to select Imaging radiology");
             Reporter.addScreenshotToReport(null, test, null, Base.driver);
+        try{
+            helper.waitForElementToBeVisible(OhioPageLocators.imagingradiology, 6);
+            helper.hoverByLocater(OhioPageLocators.imagingradiology);
+            helper.hoverByLocater(OhioPageLocators.imagingradiology);
+            helper.clickByLocater(OhioPageLocators.imagingradiology);
+            LoggerHandler.info("Clicked on ImageRadiology");
+            test.log(Status.PASS,"Clicked on ImageRadiology");
+        }catch(Exception e){
+            LoggerHandler.info("Failed to click on ImageRadiology");
+            test.log(Status.FAIL,"Failed to click on ImageRadiology");
+        }
+    }
 
         }
     }

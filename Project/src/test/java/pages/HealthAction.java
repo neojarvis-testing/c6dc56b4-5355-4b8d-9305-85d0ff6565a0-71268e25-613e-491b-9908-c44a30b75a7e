@@ -7,6 +7,10 @@ import uistore.HealthPageLocators;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.Reporter;
+
+import uistore.HealthPageLocators;
+import utils.Base;
+import utils.LoggerHandler;
 import utils.WebDriverHelper;
  
 public class HealthAction {
@@ -22,7 +26,7 @@ public class HealthAction {
  * Parameter List:
  *   - ExtentTest test: Instance of ExtentTest for logging and reporting.
  */
- 
+
     public HealthAction(ExtentTest test){
         helper= new WebDriverHelper(Base.driver);
         this.test=test;
