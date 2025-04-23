@@ -2,14 +2,14 @@ package pages;
  
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
- 
+
 import uistore.ActionsPageLocators;
 import utils.Assertion;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.Reporter;
 import utils.WebDriverHelper;
- 
+
 public class ActionsPageAction {
     public WebDriverHelper helper;
     ExtentTest test;
